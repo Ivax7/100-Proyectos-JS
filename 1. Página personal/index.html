@@ -29,6 +29,7 @@
     </div>
   </header>
 
+  <div class="contenido-principal">
     <main>
       <section>
         <h2 id="acerca-de-mi">Acerca de mí</h2>
@@ -76,18 +77,43 @@
           </article>
 
 
-          
+
         </div>
         <a href="#" class="ver-mas">Ver mas</a>
-      </section>      
+      </section> 
+      
+      <section>
+        <h2 id="cv">Currículum Vitae</h2>
+        <div class="cv">
+          <a href="img/XavierSerranoCV.pdf" target="_blank" rel="noopener noreferrer">Ver Currículum Vitae</a>
+          <a href="img/XavierSerranoCV.pdf" download class="btn">Descargar Currículum Vitae</a>
+        </div>
+      </section>
+      
+
     </main>
+
+
+    <aside>
+      <form id="contact-form">
+        <h3>Formulario de contacto</h3>
+        <input type="text" id="name" placeholder="Tu nombre" required>
+        <input type="email" id="email" placeholder="Tu correo" required>
+        <textarea id="message" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </aside>
+  </div>
 
     <footer id="contacto">
       <h2>Contacto</h2>
       <ul>
-        <li><a href="https://www.linkedin.com/in/xavi-serrano-salvador-00435826a/" target="_blank"><img src="img/linkedin.avif" alt="Logo Linkedin"></a></p>
-        <li><a href="mailto:xserrano2001@gmail.com"><img src="img/gmail.avif" alt="Gmail"></a></p>
+        <li><a href="https://www.linkedin.com/in/xavi-serrano/" class="tooltip" data-tooltip="LinkedIn" target="_blank">
+          <img src="img/linkedin.png" alt="LinkedIn">
+        </a></p>
+        <li><a href="mailto:xserrano2001@gmail.com" class="tooltip" data-tooltip="Gmail" target="_blank"><img src="img/gmail.avif" alt="Gmail"></a></p>
       </ul>
+
     </footer>
 
     <script type="module" src="/script.js"></script>

@@ -27,10 +27,10 @@ const moreProjects = [
     live: 'https://user.github.io/project2/',
   },
   {
-    title: 'New Project 2',
+    title: 'New Project 3',
     img: './img/placeholder-image.jpg',
-    github: 'https://github.com/user/project2',
-    live: 'https://user.github.io/project2/',
+    github: 'https://github.com/user/project3',
+    live: 'https://user.github.io/project3/',
   },
 ]
 
@@ -68,7 +68,7 @@ toggleThemeBtn.addEventListener('click', () => {
   
   // Cambia el `src` de la imagen
   if (document.body.classList.contains('clear-mode')) {
-    toggleThemeBtn.src = 'img/night-mode.png'; // Cambia al modo claro
+    toggleThemeBtn.src = 'img/lightmode.png'; // Cambia al modo claro
   } else {
     toggleThemeBtn.src = 'img/darkmode.png'; // Cambia al modo oscuro
   }
@@ -77,103 +77,38 @@ toggleThemeBtn.addEventListener('click', () => {
 
 
 
-// 4. Animaciones con Intersection Observer
-// Puedes animar las secciones cuando entren en el viewport.
+/*Animación con intersection observer */
 
-// CSS:
+const sections = document.querySelectorAll('section');
 
-// css
-// Copiar
-// Editar
-// section {
-//   opacity: 0;
-//   transform: translateY(20px);
-//   transition: all 0.5s ease-in-out;
-// }
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
 
-// section.visible {
-//   opacity: 1;
-//   transform: translateY(0);
-// }
-// Código JS:
+sections.forEach(section => observer.observe(section));
 
-// javascript
-// Copiar
-// Editar
-// const sections = document.querySelectorAll('section');
 
-// const observer = new IntersectionObserver(entries => {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add('visible');
-//     }
-//   });
-// });
 
-// sections.forEach(section => observer.observe(section));
-// 5. Formulario de Contacto con Validación
-// Si decides agregar un formulario en la sección de contacto, puedes validar los campos con JavaScript antes de enviarlos.
+// Formulario de Contacto con Validación //
 
-// HTML:
 
-// html
-// Copiar
-// Editar
-// <form id="contact-form">
-//   <input type="text" id="name" placeholder="Tu nombre" required>
-//   <input type="email" id="email" placeholder="Tu correo" required>
-//   <textarea id="message" placeholder="Tu mensaje" required></textarea>
-//   <button type="submit">Enviar</button>
-// </form>
-// Código JS:
+document.getElementById('contact-form').addEventListener('submit', (e) => {
+  e.preventDefault();
 
-// javascript
-// Copiar
-// Editar
-// document.getElementById('contact-form').addEventListener('submit', (e) => {
-//   e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
 
-//   const name = document.getElementById('name').value.trim();
-//   const email = document.getElementById('email').value.trim();
-//   const message = document.getElementById('message').value.trim();
+  if (!name || !email || !message) {
+    alert('Por favor, rellena todos los campos.');
+    return;
+  }
 
-//   if (!name || !email || !message) {
-//     alert('Por favor, rellena todos los campos.');
-//     return;
-//   }
+  alert('Formulario enviado con éxito.');
+});
 
-//   alert('Formulario enviado con éxito.');
-// });
-// 6. Tooltip para Iconos de Redes Sociales
-// Muestra un pequeño texto al pasar el mouse sobre los iconos de redes sociales.
 
-// CSS:
-
-// css
-// Copiar
-// Editar
-// .tooltip {
-//   position: relative;
-// }
-
-// .tooltip:hover::after {
-//   content: attr(data-tooltip);
-//   position: absolute;
-//   top: -25px;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   background-color: #333;
-//   color: #fff;
-//   padding: 5px;
-//   border-radius: 5px;
-//   font-size: 12px;
-//   white-space: nowrap;
-// }
-// HTML:
-
-// html
-// Copiar
-// Editar
-// <a href="https://www.linkedin.com/in/xavi-serrano/" class="tooltip" data-tooltip="LinkedIn">
-//   <img src="img/linkedin.png" alt="LinkedIn">
-// </a>
