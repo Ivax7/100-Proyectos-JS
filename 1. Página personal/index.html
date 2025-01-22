@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <!-- Menú de navegación -->
+    <nav>
+      <ul>
+        <li><a href="#acerca-de-mi">Acerca de mí</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><img src="img/darkmode.png" id="toggle-theme"></li>
+      </ul>
+    </nav>
+
+    <!-- Presentación -->
+    <div class="presentacion">
+      <img class="perfil" src="img/Perfil.avif" alt="Imagen de perfil">
+      <div class="datos">
+        <h1>Xavier Serrano Salvador</h1>
+        <p>Full Stack Developer</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="contenido-principal">
+    <main>
+      <section>
+        <h2 id="acerca-de-mi">Acerca de mí</h2>
+        <p>¡Hola! Soy Xavi Serrano, apasioado del desarrollador web y estudiante autodidacta de varias tecnologías. Graduado en ADE en la UB y en el Master Universitario en Desarrollo de sitios y aplicaciones web.
+        </p>
+      </section>
+      
+      <section>
+        <h2 id="experiencia">Experiencia</h2>
+        <ul class="experiencia">
+          <li>VF Corporation 2024-Actualidad</li>
+          <li>Casa Masferrer 2023-2023</li>
+          <li>Coniex 2018-2019</li>
+        </ul>
+      </section>
+      
+      <section>
+        <h2 id="proyectos">Proyectos</h2>
+        <div class="proyectos">
+          <article>
+              <img class="proyecto-imagen" src="./img/Galeria-drag&drop.avif" alt="">
+              <div>
+                <p>Drag And Drop Gallery</p>
+                <a href="https://github.com/Ivax7/Drag-Drop-Galery" target="_blank"><img class="logos" src="img/github.avif" alt="Logo de GitHub"></a>
+                <a href="https://ivax7.github.io/Drag-Drop-Galery/" target="_blank"><img class="logos" src="img/web.avif" alt="Logo de web"></a>
+              </div>
+          </article>
+
+          <article>
+            <img class="proyecto-imagen" src="./img/buscador-marvel.avif" alt="">
+            <div>
+              <p>Buscador personajes Marvel</p>
+              <a href="https://github.com/Ivax7/Buscador-Marvel" target="_blank"><img class="logos" src="img/github.avif" alt="Logo de GitHub"></a>
+              <a href="https://ivax7.github.io/Buscador-Marvel/" target="_blank"><img class="logos" src="img/web.avif" alt="Logo de web"></a>
+            </div>
+        </article>
+
+          <article>
+              <img class="proyecto-imagen" src="./img/PokeApi.avif" alt="">
+              <div>
+                <p>Poke API</p>
+                <a href="https://github.com/Ivax7/Pokedex" target="_blank"><img class="logos" src="img/github.avif" alt="Logo de GitHub"></a>
+                <a href="https://ivax7.github.io/Pokedex/" target="_blank"><img class="logos" src="img/web.avif" alt="Logo de web"></a>
+              </div>
+          </article>
+
+
+
+        </div>
+        <a href="#" class="ver-mas">Ver mas</a>
+      </section> 
+      
+      <section>
+        <h2 id="cv">Currículum Vitae</h2>
+        <div class="cv">
+          <a href="img/XavierSerranoCV.pdf" target="_blank" rel="noopener noreferrer">Ver Currículum Vitae</a>
+          <a href="img/XavierSerranoCV.pdf" download class="btn">Descargar Currículum Vitae</a>
+        </div>
+      </section>
+      
+
+    </main>
+
+
+    <aside>
+      <form id="contact-form">
+        <h3>Formulario de contacto</h3>
+        <input type="text" id="name" placeholder="Tu nombre" required>
+        <input type="email" id="email" placeholder="Tu correo" required>
+        <textarea id="message" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </aside>
+  </div>
+
+    <footer id="contacto">
+      <h2>Contacto</h2>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/xavi-serrano/" class="tooltip" data-tooltip="LinkedIn" target="_blank">
+          <img src="img/linkedin.png" alt="LinkedIn">
+        </a></p>
+        <li><a href="mailto:xserrano2001@gmail.com" class="tooltip" data-tooltip="Gmail" target="_blank"><img src="img/gmail.avif" alt="Gmail"></a></p>
+      </ul>
+
+    </footer>
+
+    <script type="module" src="/script.js"></script>
+</body>
+</html>
