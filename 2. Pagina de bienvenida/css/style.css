@@ -13,12 +13,7 @@ body {
   background: linear-gradient(0.25turn, #000000, #292928, #000000);
 }
 
-/* main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-} */
+
 
 .amygdala {
   position: absolute;
@@ -60,6 +55,95 @@ h1 {
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
   z-index: 2;
   position: relative;
+}
+
+.cartel {
+  position: absolute;
+  right: 350px;
+  filter: brightness(0.7) contrast(1.1) saturate(0.5);
+  background-image: url("../img/elements/cuadro.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+
+.mesita {
+  position: absolute;
+  right: 325px;
+  top: 200px;
+  filter: brightness(0.7) contrast(1.1) saturate(0.5);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  z-index: 9999;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+.cuaderno {
+  position: absolute;
+  right: 410px;
+  top: 230px;
+  filter: brightness(0.7) contrast(1.1) saturate(0.5);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80px;
+  z-index: 9999;
+  color: white;
+  filter: drop-shadow(2px 2px 5px rgb(255, 255, 255));
+  transform-origin: center bottom; /* Ajusta el punto de transformación */
+}
+
+
+.estanteria {
+  position: absolute;
+  top: -50px;
+  right: 100px;
+  filter: brightness(0.7) contrast(1.1) saturate(0.5);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 200px;
+  z-index: 9999;
+  font-size: 34px;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+.github, .gmail {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 25px;
+  filter: brightness(0.7) contrast(1.1) saturate(0.5);
+  filter: drop-shadow(1px 1px 5px rgba(255, 255, 255, 0.39));
+  z-index: 99999999999;
+}
+
+.github {
+  right: 250px;
+  background-image: url("../img/elements/github.avif");
+  background-size: cover ;
+}
+
+.gmail {
+  top: 30px;
+  height: 50px;
+  right: 160px;
+  background-image: url("../img/elements/gmail.png");
+  background-size: cover ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 
@@ -110,6 +194,18 @@ h1 {
   background-image: url('../img/elements/cartel-oscuro.jpg');
 }
 
+.luz-de-luna{
+  position: absolute;
+  width: 330px;
+  right: 0px;
+  top: 100px;
+  transition: all .2s ease-in-out;
+}
+
+.luz-de-luna:hover {
+  transform: translate(10px, -20px);
+}
+
 
 
 .suelo-imagen {
@@ -123,4 +219,45 @@ h1 {
   background-size: contain;
   box-shadow: 0px -20px 30px rgba(0, 0, 0, 0.8);
   filter: brightness(0.7) contrast(1.3) saturate(0.5);
+}
+
+
+
+/* Estilos del modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con opacidad */
+  z-index: 10000;
+}
+
+/* Contenido del modal */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2c2c2c;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-family: 'Georgia', serif;
+  border: 2px solid #784e2d;
+}
+
+/* Botón de cerrar */
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
 }
