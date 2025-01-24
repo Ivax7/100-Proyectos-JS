@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'PokemonSolid';
+  src: url('fonts/pokemon/PokemonSolid.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PokemonClassic';
+  src: url('fonts/pokemon_classic/PokemonClassic.ttf') format('truetype');
+}
+
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: 'PokemonClassic', Georgia, serif;
+  font-weight: 600;
+  background: #36225e;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 900px;
+  min-height: 80%;
+  background-color: red;
+  background-color: #695b86;
+  background-image: url('gengar.png');
+  background-size: 100px;
+  box-shadow: 2px 5px 10px #120f16;
+  border-radius: 12px;
+}
+
+h1 {
+  font-family: 'PokemonSolid';
+  font-weight: 100;
+  text-align: center;
+  font-size: 36px;
+  color: rgb(105, 23, 23);
+  text-shadow: 1px 1px 5px rgb(255, 255, 255);
+}
+
+form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+label, input {
+  width: 500px;
+  font-size: 24px;
+  font-family: 'PokemonClassic';
+}
+
+label {
+  text-decoration: underline;
+  padding-block: 20px;
+}
+
+input {
+  padding: 20px;
+}
+
+.submit {
+  margin-block: 20px;
+  background-color: #695b86;
+  box-shadow: 5px 5px 10px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  transition: all .2s ease-in-out;
+}
+
+.submit:hover {
+  filter: brightness(1.1);
+  color: #1b1724;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  margin: 0 auto;
+  inset: 0;
+  background-color: aliceblue;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.452);
+  width: 100%;
+  height: 100%;
+}
+
+#pokemonModalContent {
+  border: 2px solid black;
+  height: 500px;
+  background-color: aliceblue;
+  padding: 5px;
+}
+
+.imagen {
+  width: 100%;
+  background-color: rgb(194, 194, 194);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal img {
+  width: 300px;
+}
+
+.type {
+  filter: brightness(0) saturate(100%);
+}
