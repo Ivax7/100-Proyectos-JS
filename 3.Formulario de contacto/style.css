@@ -44,6 +44,8 @@ h1 {
   font-size: 36px;
   color: rgb(105, 23, 23);
   text-shadow: 1px 1px 5px rgb(255, 255, 255);
+  background: rgb(51, 13, 87);
+  box-shadow: 2px 2px 5px black;
 }
 
 form {
@@ -86,8 +88,8 @@ input {
   color: #1b1724;
 }
 
-.modal {
-  display: none;
+#pokemonModal {
+  display: flex;
   position: absolute;
   margin: 0 auto;
   inset: 0;
@@ -102,9 +104,10 @@ input {
 
 #pokemonModalContent {
   border: 2px solid black;
-  height: 500px;
+  height: 475px;
   background-color: aliceblue;
   padding: 5px;
+  position: relative;
 }
 
 .imagen {
@@ -121,4 +124,149 @@ input {
 
 .type {
   filter: brightness(0) saturate(100%);
+}
+
+.type img {
+  width: 50px;
+}
+
+.pokemonInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.pokemonInfo h2 {
+  background-color: #695b86;
+  padding: 5px;
+  margin-top: 5px;
+  box-shadow: 2px 2px 5px black;
+}
+
+
+.close {
+  position: absolute;
+  right: 7px;
+  top: 0;
+  cursor: pointer;
+}
+
+
+/*Ranking*/
+
+/* Contenedor del ranking */
+#ranking {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  padding: 10px;
+  background-color: #fcdb95; /* Fondo claro */
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.3); /* Sombra para destacarlo */
+  overflow-y: auto; /* Habilitar scroll si el contenido supera la altura */
+  z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+  display: none; /* Por defecto, oculto */
+  flex-direction: column; /* Asegura que los elementos estén en una columna */
+}
+
+/* Botón para abrir el ranking */
+.open-ranking {
+  float: right;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: white;
+  background-color: #36225e;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px black;
+}
+
+.open-ranking:hover {
+  filter: brightness(1.1);
+}
+
+/* Mostrar ranking al activarlo */
+#ranking.show {
+  display: flex; /* Se muestra cuando se añade la clase 'show' */
+  flex-direction: column;
+}
+
+/* Título del ranking */
+#ranking h2 {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0;
+  color: #695b86;
+  font-family: 'PokemonClassic';
+  text-transform: uppercase; /* Para darle más estilo al título */
+  letter-spacing: 2px;
+}
+
+/* Contenido del ranking */
+#rankingContent {
+  padding: 10px;
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  gap: 10px; /* Espacio entre ítems */
+  overflow-y: auto; /* Habilitar scroll si es necesario */
+}
+
+/* Estilo de los ítems en el ranking */
+.rank-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.rank-item .rank {
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffcc00;
+  text-align: center;
+  width: 30px;
+}
+
+.rank-item .pokemon-name {
+  font-size: 18px;
+  flex-grow: 1;
+  margin-left: 10px;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #333;
+}
+
+.rank-item .count {
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+
+/* Botón de cerrar el ranking */
+.close-ranking {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.close-ranking:hover {
+  background-color: #c82333;
 }

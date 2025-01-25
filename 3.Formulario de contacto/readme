@@ -1,2 +1,1 @@
-Un formulario que pregunte nombre, apellidos, edad, y pokemon favorito
-Y que muestre al pokemon accediendo a la pokeApi
+1. Que guarde los datos en BD y crear botón ver estadísticas a ver que top 10 de pokemon y cuantas respuestas ha recibido
