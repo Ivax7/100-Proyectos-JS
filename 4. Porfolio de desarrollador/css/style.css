@@ -14,7 +14,23 @@ body {
   background-color: var(--var-black);
   color: var(--var-white);
   overflow: hidden; /* Evita el scroll no deseado */
+  transition: all .2s;
 }
+
+body.monospace-font {
+  font-family: monospace;
+}
+
+body.monospace-font .theme ul li#monospace-font:before {
+  content: "\25A0";
+}
+
+body.monospace-font .theme ul li:before {
+  font-size: 12px;
+  margin-right: 3px;
+}
+
+
 
 body.light-mode {
   background-color: var(--var-white);
@@ -40,6 +56,7 @@ header {
   flex-direction: column;
   font-size: 30px;
   gap: 40px;
+  z-index: 10;
 }
 
 header h1 {
@@ -78,6 +95,7 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.384);
   overflow-y: auto; /* Permite scroll dentro de main si el contenido es muy grande */
   margin: 0; /* Elimina el margen que empujaba al main */
+
 }
 
 main.light-mode {
@@ -85,16 +103,6 @@ main.light-mode {
 }
 
 
-.about {
-  font-family: 'Neue Montreal';
-  position: absolute;
-  width: 100px;
-  right: 70px;
-  bottom: 70px;
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 1.4;
-}
 
 .theme {
   position: fixed;
@@ -128,6 +136,11 @@ body.light-mode .theme ul li#light-mode:before {
   content: "\25A0";
 }
 
+body.dark-mode .theme ul li#dark-mode:before {
+  content: "\25A0";
+}
+
+
 
 .copyright {
   position: fixed;
@@ -141,4 +154,50 @@ body.light-mode .theme ul li#light-mode:before {
   font-size: 12px;
   letter-spacing: 1px;
 
+}
+
+
+
+
+.about {
+  font-family: 'Neue Montreal';
+  position: absolute;
+  width: 100px;
+  right: 70px;
+  bottom: 70px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.projects {
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+  padding-right: 135px;
+  bottom: 0px;
+  font-size: 60px;
+  font-weight: 100;
+  text-transform: uppercase;
+  overflow-y: auto; /* Asegúrate de que esto esté presente */
+}
+
+
+.projects ul {
+  padding-top: 200px;
+  overflow-y: auto;
+}
+
+.projects ul::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.projects span {
+  font-family: 'Neue Montreal';
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-right: 20px;
 }
