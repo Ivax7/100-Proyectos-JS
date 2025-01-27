@@ -1,0 +1,25 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a, a::after {
+  text-decoration: none;
+  color: var(--var-white);
+}
+
+li {
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('../fonts/neuemontreal/NeueMontreal-Regular.otf') format('opentype');
+}
+
+
+@font-face {
+  font-family: 'Neue Montreal Light';
+  src: url('../fonts/neuemontreal/NeueMontreal-Light.otf') format('opentype');
+}
