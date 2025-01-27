@@ -1,4 +1,14 @@
 :root {
   --var-black: hsl(0, 0%, 5%);
-  --var-white: hsl(0, 0%, 95%)
+  --var-white: hsl(0, 0%, 95%);
+  --var-gray: hsl(0, 0%, 48%);
 }
+
+/* 
+
+"\25A0" -- Lleno
+"\25A1" -- Vacío
+
+
+
+*/
