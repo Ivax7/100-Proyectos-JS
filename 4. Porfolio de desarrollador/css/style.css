@@ -37,6 +37,11 @@ body.light-mode {
   color: var(--var-black);
 }
 
+body.light-mode a {
+  color: var(--var-black);
+}
+
+
 .page {
   position: fixed;
   left: 0;
@@ -73,12 +78,12 @@ header p {
 header ul {
   font-family: 'Neue Montreal';
   font-weight: 600;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.6;
 }
 
 .links {
-  margin-block: 20px;
+  margin-block: 10px;
 }
 
 .links a {
@@ -95,7 +100,8 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.384);
   overflow-y: auto; /* Permite scroll dentro de main si el contenido es muy grande */
   margin: 0; /* Elimina el margen que empujaba al main */
-
+  position: relative;
+  overflow-x: hidden;
 }
 
 main.light-mode {
@@ -157,8 +163,6 @@ body.dark-mode .theme ul li#dark-mode:before {
 }
 
 
-
-
 .about {
   font-family: 'Neue Montreal';
   position: absolute;
@@ -184,6 +188,10 @@ body.dark-mode .theme ul li#dark-mode:before {
   overflow-y: auto; /* Asegúrate de que esto esté presente */
 }
 
+.project-list {
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+}
 
 .projects ul {
   padding-top: 200px;
@@ -200,4 +208,160 @@ body.dark-mode .theme ul li#dark-mode:before {
   font-size: 11px;
   letter-spacing: 2px;
   margin-right: 20px;
+} 
+
+.project-list li, .project-list li a {
+  transition: all .2s ease-in-out;
+}
+
+.project-list li:hover, .project-list li:hover a {
+  color: var(--var-gray);
+}
+
+
+
+/* Info */
+
+.info-box {
+  display: grid;
+  width: 100%;
+  z-index: 9999999;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+
+.info {
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.info li {
+  font-family: 'Neue Montreal';
+}
+
+.info a {
+  transition: all .2s ease-in-out;
+}
+
+.info a:hover {
+  color: var(--var-gray);
+}
+
+
+.professional-contact {
+  grid-column: 1;
+  grid-row: 2;
+  text-align: right;
+  align-items: end;
+}
+
+.experience {
+  grid-column: 2;
+  grid-row: 2;
+  text-align: right;
+  align-self: end;
+}
+
+.side-projects {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: right;
+  align-self: start;
+}
+
+
+.experience span {
+  font-weight: 100;
+}
+
+
+/* Contact */
+
+.github {
+  font-family: 'Neue Montreal';
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+
+
+/* FAQ */
+
+.FAQ {
+  padding-top: 130px;
+  text-transform: none;
+  letter-spacing: 1.1px;
+  font-size: 12px;
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+  padding-inline: 100px;
+  bottom: 35px;
+  overflow-y: auto;
+  
+}
+
+
+.FAQ-list {
+  font-size: 12px;
+  width: 500px;
+
+}
+
+
+
+.FAQ-list h3 {
+  font-size: 12px;
+  padding-block: 60px 20px;
+  font-family: 'Neue Montreal';
+}
+
+.FAQ-list p {
+
+  padding-block: 5px;
+  margin-right: 50px;
+}
+
+.FAQ ul {
+  margin: 0;
+  padding: 0;
+}
+
+.FAQ-list ul li {
+  padding-block: 5px;
+}
+
+.FAQ ul li a {
+  text-decoration: underline;
+}
+
+
+
+/* Copycast */
+
+.copycast-list p {
+  padding-block: 5px;
+  letter-spacing: 1.2px;
+}
+
+.copycast-list a {
+  font-family: 'Neue Montreal';
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* No interfiere con clics */
 }
