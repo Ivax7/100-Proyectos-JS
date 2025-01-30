@@ -1,0 +1,67 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal SemiBold';
+  src: url('../font/pp-neue-montreal-cufonfonts/ppneuemontreal-semibolditalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal Medium';
+  src: url('../font/pp-neue-montreal-cufonfonts/ppneuemontreal-medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('../font/pp-neue-montreal-cufonfonts/ppneuemontreal-medium.otf') format('opentype');
+}
+
+a, a::after  {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: 'PP Neue Montreal';
+  font-weight: 600;
+  background-color: beige;
+  min-height: 100vh;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+
+.logo {
+  padding: 0;
+  line-height: .8;
+}
+
+span {
+  font-size: 8px;
+}
+
+
+.icon {
+  width: 20px;
+
+}
