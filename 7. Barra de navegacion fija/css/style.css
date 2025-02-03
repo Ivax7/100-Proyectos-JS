@@ -31,7 +31,7 @@ li {
 body {
   font-family: 'PP Neue Montreal';
   font-weight: 600;
-  background-color: beige;
+  background-color: hsl(200deg 5.88% 90%);
   min-height: 100vh;
 }
 
@@ -63,5 +63,43 @@ span {
 
 .icon {
   width: 20px;
+}
 
+
+/* New releases section */
+
+.new-releases {
+  cursor: grab;
+  padding-block: 50px;
+  padding-left: 50px;
+  position: relative;
+
+  border-bottom: 1px solid black;
+}
+
+.new-releases p {
+  font-size: 150px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+
+.list-new-releases {
+  display: flex;
+  gap: 50px;
+  z-index: 1;
+  position: relative;  
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.new-release-book {
+  height: 200px;  /* Establece la altura de las imágenes de los libros */
+  border-radius: 4px;
+  border: 1px solid;
+  padding: 10px;
 }
