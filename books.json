@@ -1,0 +1,143 @@
+[
+  {
+    "title": "Elantris",
+    "series": null,
+    "publication_year": 2005,
+    "description": "Sanderson's debut novel, set in the city of Elantris, which was once a place of magic and glory.",
+    "cover_image": "img/books/elantris.jpg"
+  },
+  {
+    "title": "Mistborn: The Final Empire",
+    "series": "Mistborn",
+    "publication_year": 2006,
+    "description": "The first book in the Mistborn series, introducing a world where ash falls from the sky and mist dominates the night.",
+    "cover_image": "img/books/the-final-empire.jpg"
+  },
+  {
+    "title": "The Well of Ascension",
+    "series": "Mistborn",
+    "publication_year": 2007,
+    "description": "The second installment in the Mistborn series, continuing the saga of a group of rebels with magical abilities.",
+    "cover_image": "img/books/el-pozo-de-la-ascension.jpg"
+  },
+  {
+    "title": "The Hero of Ages",
+    "series": "Mistborn",
+    "publication_year": 2008,
+    "description": "The conclusion to the original Mistborn trilogy, where heroes must unite to save their world.",
+    "cover_image": "img/books/el-heroe-de-las-eras.jpg"
+  },
+  {
+    "title": "Warbreaker",
+    "series": null,
+    "publication_year": 2009,
+    "description": "A standalone novel exploring a world where magic is derived from color and breath.",
+    "cover_image": "img/books/warbreaker.jpg"
+  },
+  {
+    "title": "The Way of Kings",
+    "series": "The Stormlight Archive",
+    "publication_year": 2010,
+    "description": "The first book in The Stormlight Archive series, introducing the world of Roshar and its complex characters.",
+    "cover_image": "img/books/the-way-of-kings.jpg"
+  },
+  {
+    "title": "The Alloy of Law",
+    "series": "Mistborn",
+    "publication_year": 2011,
+    "description": "A return to the Mistborn world, set 300 years after the original trilogy, blending fantasy with a Wild West setting.",
+    "cover_image": "img/books/the-alloy-of-law.jpg"
+  },
+  {
+    "title": "Words of Radiance",
+    "series": "The Stormlight Archive",
+    "publication_year": 2014,
+    "description": "The second book in The Stormlight Archive, delving deeper into the mysteries of Roshar.",
+    "cover_image": "img/books/words-of-radiance.jpg"
+  },
+  {
+    "title": "Shadows of Self",
+    "series": "Mistborn",
+    "publication_year": 2015,
+    "description": "Continuing the adventures in the Mistborn world, with new challenges and characters.",
+    "cover_image": "img/books/shadows-of-self.jpg"
+  },
+  {
+    "title": "The Bands of Mourning",
+    "series": "Mistborn",
+    "publication_year": 2016,
+    "description": "Further explorations in the Mistborn universe, uncovering ancient artifacts and secrets.",
+    "cover_image": "img/books/the-bands-of-mourning.jpg"
+  },
+  {
+    "title": "Oathbringer",
+    "series": "The Stormlight Archive",
+    "publication_year": 2017,
+    "description": "The third installment in The Stormlight Archive, where past secrets come to light.",
+    "cover_image": "img/books/oathbringer.jpg"
+  },
+  {
+    "title": "Skyward",
+    "series": "Skyward",
+    "publication_year": 2018,
+    "description": "A science fiction novel about a young woman dreaming of becoming a pilot in a war-torn universe.",
+    "cover_image": "img/books/skyward.jpg"
+  },
+  {
+    "title": "Starsight",
+    "series": "Skyward",
+    "publication_year": 2019,
+    "description": "The sequel to Skyward, exploring new worlds and deeper mysteries.",
+    "cover_image": "img/books/starsight.jpg"
+  },
+  {
+    "title": "Rhythm of War",
+    "series": "The Stormlight Archive",
+    "publication_year": 2020,
+    "description": "The fourth book in The Stormlight Archive, continuing the epic saga.",
+    "cover_image": "img/books/rhythm-of-war.jpg"
+  },
+  {
+    "title": "Dawnshard",
+    "series": "The Stormlight Archive",
+    "publication_year": 2020,
+    "description": "A novella set in The Stormlight Archive universe, providing additional insights.",
+    "cover_image": "img/books/dawnshard.jpg"
+  },
+  {
+    "title": "Cytonic",
+    "series": "Skyward",
+    "publication_year": 2021,
+    "description": "The third book in the Skyward series, following further adventures in space.",
+    "cover_image": "img/books/cytonic.jpg"
+  },
+  {
+    "title": "Evershore",
+    "series": "Skyward",
+    "publication_year": 2021,
+    "description": "A novella in the Skyward series, offering deeper character perspectives.",
+    "cover_image": "img/books/evershore.jpg"
+  },
+  {
+    "title": "The Lost Metal",
+    "series": "Mistborn",
+    "publication_year": 2022,
+    "description": "The latest addition to the Mistborn series, unveiling new challenges and mysteries.",
+    "cover_image": "img/books/the-lost-metal.jpg"
+  },
+  {
+    "title": "The Frugal Wizard's Handbook for Surviving Medieval England",
+    "series": null,
+    "publication_year": 2023,
+    "description": "A humorous and adventurous standalone novel exploring alternate history and wizardry.",
+    "cover_image": "img/books/the-frugal-wizard.jpg"
+  },
+  {
+    "title": "Yumi and the Nightmare Painter",
+    "series": null,
+    "publication_year": 2023,
+    "description": "A unique fantasy novel set in the Cosmere, blending art, dreams, and powerful magic.",
+    "cover_image": "img/books/yumi-and-the-nightmare-painter.jpg"
+  }
+]
+

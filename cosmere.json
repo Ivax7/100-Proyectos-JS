@@ -1,0 +1,144 @@
+{
+  "Elantris": [
+    {
+      "title": "Elantris",
+      "publication_year": 2005,
+      "description": "Sanderson's debut novel, set in the city of Elantris, which was once a place of magic and glory.",
+      "cover_image": "img/books/elantris.jpg"
+    }
+  ],
+  "Mistborn": [
+    {
+      "title": "Mistborn: The Final Empire",
+      "publication_year": 2006,
+      "description": "The first book in the Mistborn series, introducing a world where ash falls from the sky and mist dominates the night.",
+      "cover_image": "img/books/the-final-empire.jpg"
+    },
+    {
+      "title": "The Well of Ascension",
+      "publication_year": 2007,
+      "description": "The second installment in the Mistborn series, continuing the saga of a group of rebels with magical abilities.",
+      "cover_image": "img/books/el-pozo-de-la-ascension.jpg"
+    },
+    {
+      "title": "The Hero of Ages",
+      "publication_year": 2008,
+      "description": "The conclusion to the original Mistborn trilogy, where heroes must unite to save their world.",
+      "cover_image": "img/books/el-heroe-de-las-eras.jpg"
+    },
+    {
+      "title": "The Alloy of Law",
+      "publication_year": 2011,
+      "description": "A return to the Mistborn world, set 300 years after the original trilogy, blending fantasy with a Wild West setting.",
+      "cover_image": "img/books/the-alloy-of-law.jpg"
+    },
+    {
+      "title": "Shadows of Self",
+      "publication_year": 2015,
+      "description": "Continuing the adventures in the Mistborn world, with new challenges and characters.",
+      "cover_image": "img/books/shadows-of-self.jpg"
+    },
+    {
+      "title": "The Bands of Mourning",
+      "publication_year": 2016,
+      "description": "Further explorations in the Mistborn universe, uncovering ancient artifacts and secrets.",
+      "cover_image": "img/books/the-bands-of-mourning.jpg"
+    },
+    {
+      "title": "Secret History",
+      "publication_year": 2016,
+      "description": "Una novela corta de Mistborn que revela eventos ocultos durante la trilogía original.",
+      "cover_image": "img/books/secret-history.jpg"
+    },
+    {
+      "title": "The Lost Metal",
+      "publication_year": 2022,
+      "description": "The latest addition to the Mistborn series, unveiling new challenges and mysteries.",
+      "cover_image": "img/books/the-lost-metal.jpg"
+    }
+  ],
+  "The Stormlight Archive": [
+    {
+      "title": "The Way of Kings",
+      "publication_year": 2010,
+      "description": "The first book in The Stormlight Archive series, introducing the world of Roshar and its complex characters.",
+      "cover_image": "img/books/the-way-of-kings.jpg"
+    },
+    {
+      "title": "Words of Radiance",
+      "publication_year": 2014,
+      "description": "The second book in The Stormlight Archive, delving deeper into the mysteries of Roshar.",
+      "cover_image": "img/books/words-of-radiance.jpg"
+    },
+    {
+      "title": "Edgedancer",
+      "publication_year": 2017,
+      "description": "Una novela corta del Archivo de las Tormentas que sigue la historia de Lift.",
+      "cover_image": "img/books/edgedancer.jpg"
+    },
+    {
+      "title": "Oathbringer",
+      "publication_year": 2017,
+      "description": "The third installment in The Stormlight Archive, where past secrets come to light.",
+      "cover_image": "img/books/oathbringer.jpg"
+    },
+    {
+      "title": "Dawnshard",
+      "publication_year": 2020,
+      "description": "A novella set in The Stormlight Archive universe, providing additional insights.",
+      "cover_image": "img/books/dawnshard.jpg"
+    },
+    {
+      "title": "Rhythm of War",
+      "publication_year": 2020,
+      "description": "The fourth book in The Stormlight Archive, continuing the epic saga.",
+      "cover_image": "img/books/rhythm-of-war.jpg"
+    }
+  ],
+  "White Sand": [
+    {
+      "title": "White Sand Volume 1",
+      "publication_year": 2016,
+      "description": "El primer volumen de la novela gráfica White Sand, ambientada en el Cosmere.",
+      "cover_image": "img/books/the-white-sand-1.jpg"
+    },
+    {
+      "title": "White Sand Volume 2",
+      "publication_year": 2018,
+      "description": "El segundo volumen de la novela gráfica White Sand, que continúa la historia en el desierto de Taldain.",
+      "cover_image": "img/books/the-white-sand-2.jpg"
+    },
+    {
+      "title": "White Sand Volume 3",
+      "publication_year": 2019,
+      "description": "El volumen final de la novela gráfica White Sand.",
+      "cover_image": "img/books/the-white-sand-3.jpg"
+    }
+  ],
+  "Standalone Novels": [
+    {
+      "title": "Warbreaker",
+      "publication_year": 2009,
+      "description": "A standalone novel exploring a world where magic is derived from color and breath.",
+      "cover_image": "img/books/warbreaker.jpg"
+    },
+    {
+      "title": "The Frugal Wizard's Handbook for Surviving Medieval England",
+      "publication_year": 2023,
+      "description": "A humorous and adventurous standalone novel exploring alternate history and wizardry.",
+      "cover_image": "img/books/the-frugal-wizard.jpg"
+    },
+    {
+      "title": "Yumi and the Nightmare Painter",
+      "publication_year": 2023,
+      "description": "A unique fantasy novel set in the Cosmere, blending art, dreams, and powerful magic.",
+      "cover_image": "img/books/yumi-and-the-nightmare-painter.jpg"
+    },
+    {
+      "title": "Sunlit Man",
+      "publication_year": 2023,
+      "description": "Una novela del Cosmere que explora un mundo lleno de soles y secretos.",
+      "cover_image": "img/books/sunlit-man.jpg"
+    }
+  ]
+}

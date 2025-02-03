@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Bookshop Page">
-
   <link rel="stylesheet" href="css/style.css">
   <title>XSS</title>
 </head>
@@ -12,25 +11,101 @@
 
   <header>
     <a class="logo" href="index.html">XSS <br> <span>books</span></a>
-      <nav>
+    <nav>
       <ul>
         <li><a href="">Books</a></li>
         <li><a href="">Information</a></li>
         <li><a href="">About</a></li>
         <li><a href="">Recruit</a></li>
         <li><a href=""><img class="icon" src="./img/shopping-cart.png" alt="Shopping cart"></a></li>
-        <li><a href=""><img class="icon" src="./img/menu.png" alt="Shopping cart"> <img class="icon" src="./img/search.png" alt=""></a></li>
+        <li><a href=""><img class="icon" src="./img/menu.png" alt="Menu"> <img class="icon" src="./img/search.png" alt="Search"></a></li>
       </ul>
     </nav>
   </header>
 
   <section class="new-releases">
-    <p>New Releases</p>
-    <ul class="list-new-releases">
-    </ul>
+    <div class="grid-container" id="gallery"></div>
   </section>
 
 
+
+  <div class="content">
+    
+    <aside class="cosmere-saga">
+      <h1>Cosmere Saga</h1>
+      
+      <ul class="book-list">
+        <li><input type="checkbox" id="all-books"><label for="mistborn1">Todos</label></li>
+      </ul>
+
+
+      <div class="saga">
+        <h3>Mistborn (Nacidos de la Bruma)</h3>
+        <ul class="book-list">
+          <li><input type="checkbox" id="mistborn1"> <label for="mistborn1">El Imperio Final</label></li>
+          <li><input type="checkbox" id="mistborn2"> <label for="mistborn2">El Pozo de la Ascensión</label></li>
+          <li><input type="checkbox" id="mistborn3"> <label for="mistborn3">El Héroe de las Eras</label></li>
+          <li><input type="checkbox" id="mistborn4"> <label for="mistborn4">Historia Secreta</label></li>
+          <li><input type="checkbox" id="mistborn5"> <label for="mistborn5">Aleación de Ley</label></li>
+          <li><input type="checkbox" id="mistborn6"> <label for="mistborn6">Sombras de Identidad</label></li>
+          <li><input type="checkbox" id="mistborn7"> <label for="mistborn7">Brazales de Duelo</label></li>
+          <li><input type="checkbox" id="mistborn8"> <label for="mistborn8">El Metal Perdido</label></li>
+        </ul>
+      </div>
+    
+      <div class="saga">
+        <h3>The Stormlight Archive (El Archivo de las Tormentas)</h3>
+        <ul class="book-list">
+          <li><input type="checkbox" id="stormlight1"> <label for="stormlight1">El Camino de los Reyes</label></li>
+          <li><input type="checkbox" id="stormlight2"> <label for="stormlight2">Palabras Radiantes</label></li>
+          <li><input type="checkbox" id="stormlight3"> <label for="stormlight3">Danzante del Filo</label></li>
+          <li><input type="checkbox" id="stormlight4"> <label for="stormlight4">Juramentada</label></li>
+          <li><input type="checkbox" id="stormlight5"> <label for="stormlight5">El Ritmo de la Guerra</label></li>
+          <li><input type="checkbox" id="stormlight6"> <label for="stormlight6">Esquirla del Amanecer</label></li>
+        </ul>
+      </div>
+    
+      <div class="saga">
+        <h3>Elantris</h3>
+        <ul class="book-list">
+          <li><input type="checkbox" id="elantris1"> <label for="elantris1">Elantris</label></li>
+        </ul>
+      </div>
+    
+      <div class="saga">
+        <h3>Warbreaker (El Aliento de los Dioses)</h3>
+        <ul class="book-list">
+          <li><input type="checkbox" id="warbreaker1"> <label for="warbreaker1">El Aliento de los Dioses</label></li>
+        </ul>
+      </div>
+    
+      <div class="saga">
+        <h3>White Sand (Arena Blanca)</h3>
+        <ul class="book-list">
+          <li><input type="checkbox" id="whitesand1"> <label for="whitesand1">Arena Blanca Volumen 1</label></li>
+          <li><input type="checkbox" id="whitesand2"> <label for="whitesand2">Arena Blanca Volumen 2</label></li>
+          <li><input type="checkbox" id="whitesand3"> <label for="whitesand3">Arena Blanca Volumen 3</label></li>
+        </ul>
+      </div>
+    
+      <div class="saga">
+        <h3>Standalone (Novelas Independientes)</h3>
+        <ul class="book-list">
+          <li><input type="checkbox" id="standalone1"> <label for="standalone1">La Yumi y el Pintor de Pesadillas</label></li>
+          <li><input type="checkbox" id="standalone2"> <label for="standalone2">El Manual Frugal del Mago para Sobrevivir en la Inglaterra Medieval</label></li>
+          <li><input type="checkbox" id="standalone3"> <label for="standalone3">El Hombre Iluminado</label></li>
+        </ul>
+      </div>
+    
+    </aside>
+    
+
+
+    <main class="cosmere-content">
+      <img class="orden-cosmere" src="img/orden-cosmere.jpg" alt="">
+
+    </main>
+  </div>
 
   <script type="module" src="js/script.js"></script>
 </body>
