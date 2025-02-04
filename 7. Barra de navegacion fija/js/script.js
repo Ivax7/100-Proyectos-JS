@@ -1,59 +1,3 @@
-// const newReleaseContainer = document.querySelector('.list-new-releases');
-
-// fetch('/books.json')
-//   .then(response => response.json())
-//   .then(data => {
-//     const rows = 3; // Número de filas
-//     const columns = Math.ceil(data.length / rows); // Aproximado de columnas necesarias
-//     const occupiedPositions = Array.from({ length: rows }, () => Array(columns).fill(false));
-
-//     data.forEach(book => {
-//       const listElement = document.createElement("li");
-//       const img = document.createElement("img");
-
-//       img.src = book.cover_image;
-//       img.alt = book.title;
-//       img.classList.add("new-release-book");
-
-//       // Decide si ocupará 1 o 2 filas
-//       const rowSpan = Math.random() > 0.5 ? 2 : 1;
-//       img.classList.add(rowSpan === 1 ? "one-row" : "two-rows");
-
-//       // Encuentra una posición libre
-//       let placed = false;
-//       for (let col = 0; col < columns; col++) {
-//         for (let row = 0; row <= rows - rowSpan; row++) {
-//           // Verificar si el espacio está libre
-//           let spaceAvailable = true;
-//           for (let r = 0; r < rowSpan; r++) {
-//             if (occupiedPositions[row + r][col]) {
-//               spaceAvailable = false;
-//               break;
-//             }
-//           }
-
-//           if (spaceAvailable) {
-//             // Marcar la posición como ocupada
-//             for (let r = 0; r < rowSpan; r++) {
-//               occupiedPositions[row + r][col] = true;
-//             }
-
-//             // Asignar posición en la grilla
-//             listElement.style.gridRow = `span ${rowSpan}`;
-//             listElement.style.gridColumnStart = col + 1;
-
-//             listElement.appendChild(img);
-//             newReleaseContainer.appendChild(listElement);
-//             placed = true;
-//             break;
-//           }
-//         }
-//         if (placed) break;
-//       }
-//     });
-//   })
-//   .catch(error => console.error('Error al cargar los datos JSON:', error));
-
 
 
 async function loadBooks() {
@@ -103,12 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* All books */
 const cosmereContent = document.querySelector(".cosmere-content");
-const allBooksCheckBox = document.getElementById('all-books');
 
-allBooksCheckBox.addEventListener("change", async() => {
-  cosmereContent.innerHTML = '';
+const allBooks = document.getElementById('all-books');
 
-  if (allBooksCheckBox.checked) {
+allBooks.addEventListener('click', async () => {
+    cosmereContent.innerHTML = '';
+
+    console.log("Hola")
     cosmereContent.style.display = 'grid';
 
     try {
@@ -131,88 +76,70 @@ allBooksCheckBox.addEventListener("change", async() => {
       console.error("Error cargando libros:", error);
     }
 
-  } else {
-    // Restaurar la imagen original cuando se desmarca el checkbox
-    cosmereContent.style.display = 'block';
-    cosmereContent.innerHTML = `<img class="orden-cosmere" src="img/orden-cosmere.jpg" alt="Orden Cosmere">`;
   }
-});
+);
+
+
+
+const readingOrder = document.getElementById('order');
+
+readingOrder.addEventListener('click', async() => {
+  cosmereContent.style.display = 'block';
+
+  cosmereContent.innerHTML = `
+    <img class="orden-cosmere" src="img/orden-cosmere.jpg" alt="">
+    `
+})
 
 
 
 
 
 
-document.addEventListener("DOMContentLoaded", async function () {
-  try {
-    // Cargar los datos desde el JSON
-    const response = await fetch("/cosmere.json");
-    const sagas = await response.json();
+const sagaTitles = document.querySelectorAll('.saga-title');
 
-    const mainContent = document.querySelector(".cosmere-content");
-    const checkboxes = document.querySelectorAll(".book-list input[type='checkbox']");
-    const allBooksCheckbox = document.getElementById("all-books");
+sagaTitles.forEach(sagaTitle => {
+  sagaTitle.addEventListener('click', async () => {
+    console.log("Click detectado");
 
-    // Agregar evento a cada checkbox
-    checkboxes.forEach(checkbox => {
-      checkbox.addEventListener("change", updateBookDisplay);
-    });
+    cosmereContent.innerHTML = '';
 
-    function updateBookDisplay() {
-      let selectedBooks = [];
+    const nombreSaga = sagaTitle.textContent.trim();
 
-      if (allBooksCheckbox.checked) {
-        // Mostrar todos los libros
-        selectedBooks = Object.values(sagas).flat();
-      } else {
-        // Obtener solo los libros seleccionados
-        checkboxes.forEach(checkbox => {
-          if (checkbox.checked && checkbox.id !== "all-books") {
-            const bookInfo = getBookInfoById(checkbox.id);
-            if (bookInfo) selectedBooks.push(bookInfo);
-          }
+    try {
+      const response = await fetch('/cosmere.json');
+      const sagas = await response.json();
+
+      if (sagas[nombreSaga]) {
+        console.log("Saga encontrada:", nombreSaga);
+        console.log("Libros de la saga:", sagas[nombreSaga]);
+
+        let numLibros = sagas[nombreSaga].length;
+        let numFilas = Math.ceil(numLibros / 3); // Siempre 3 columnas
+
+        // Establecer grid dinámico
+        cosmereContent.style.display = "grid";
+        cosmereContent.style.gridTemplateColumns = "repeat(3, 1fr)";
+        cosmereContent.style.gridTemplateRows = `repeat(${numFilas}, auto)`; // Se adapta a la cantidad de libros
+
+        let html = `<h2 class="titulo-saga">${nombreSaga}</h2>`;
+
+        sagas[nombreSaga].forEach(libro => {
+            html += `
+                <div>
+                    <h3>${libro.title}</h3>
+                    <p>${libro.publication_year}</p>
+                    <img src="${libro.cover_image}" alt="${libro.title}">
+                </div>
+            `;
         });
-      }
 
-      displayBooks(selectedBooks);
+        cosmereContent.innerHTML = html;
+    } else {
+        console.log("Error: Saga no encontrada en el JSON");
     }
-
-    function getBookInfoById(bookId) {
-      // Buscar el libro en cada saga
-      for (const saga in sagas) {
-        const book = sagas[saga].find(book => normalizeTitle(book.title).includes(normalizeTitle(bookId)));
-        if (book) return book;
-      }
-      return null;
+    } catch (error) {
+      console.error("Error cargando libros:", error);
     }
-
-    function normalizeTitle(title) {
-      // Normaliza el título eliminando números y convirtiendo a minúsculas
-      return title.toLowerCase().replace(/\d+/g, "").trim();
-    }
-
-    function displayBooks(books) {
-      mainContent.innerHTML = ""; // Limpiar contenido anterior
-
-      if (books.length === 0) {
-        mainContent.innerHTML = '<p>Selecciona un libro para ver su información.</p>';
-        return;
-      }
-
-      books.forEach(book => {
-        const bookElement = document.createElement("div");
-        bookElement.classList.add("book-card");
-        bookElement.innerHTML = `
-          <h2>${book.title}</h2>
-          <p><strong>Año de publicación:</strong> ${book.publication_year}</p>
-          <p>${book.description}</p>
-          <img src="${book.cover_image}" alt="${book.title}">
-        `;
-        mainContent.appendChild(bookElement);
-      });
-    }
-  } catch (error) {
-    console.error("Error al cargar los datos del Cosmere:", error);
-  }
+  });
 });
-
