@@ -33,6 +33,11 @@ body {
   font-weight: 600;
   background-color: hsl(200deg 5.88% 90%);
   min-height: 100vh;
+  background-image: url('../img/background-galaxy.jpg');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
 }
 
 
@@ -42,6 +47,11 @@ header {
   align-items: center;
   padding: 15px 40px;
   border-bottom: 1px solid;
+  background-color: hsl(200deg 5.88% 90%);
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 0;
 }
 
 
@@ -82,11 +92,12 @@ span {
   grid-template-rows: repeat(3, 150px); /* Altura fija */
   gap: 10px;
   width: 100%;
+  margin-top: 50px;
   padding: 10px;
   overflow-x: auto;
   scrollbar-width: none; /* Oculta scrollbar en Firefox */
   -ms-overflow-style: none; /* Oculta scrollbar en Internet Explorer y Edge */
-  background-image: url('../img/patron.jpg');
+  background-image: url('../img/cosmere-header.jpg');
   background-position: center;
   background-size: contain;
   overflow-x: auto; /* Permite el scroll horizontal */
@@ -126,7 +137,6 @@ span {
 /* CONTENT */
 
 .content {
-  background-color: blue;
   display: flex;
   flex-direction: row;
 }
@@ -144,9 +154,6 @@ span {
   padding-block: 50px;
   font-size: 48px;
 }
-
-
-
 
 .saga {
   margin-bottom: 15px;
@@ -167,7 +174,6 @@ span {
   color: rgb(65, 65, 65);
 }
 
-
 .book-list {
   list-style: none;
   padding-left: 10px;
@@ -177,18 +183,11 @@ span {
   margin: 5px 0;
 }
 
-button {
-  margin-top: 20px;
-  padding: 10px;
-  border: none;
-  background-color: #007bff;
-  color: white;
+.book {
   cursor: pointer;
-  border-radius: 5px;
 }
-
-button:hover {
-  background-color: #0056b3;
+.book:hover {
+  color: rgb(65, 65, 65);
 }
 
 
@@ -196,30 +195,36 @@ button:hover {
 .cosmere-buttons {
   display: flex;
   width: 100%;
-  background-color: blue;
   justify-content: space-between;
   padding-inline: 20px;
   align-items: center;
 }
 
 .cosmere-buttons button {
+  padding: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
   margin: 10px;
   background-color: rgb(136, 94, 43);
   box-shadow: 2px 2px 5px burlywood;
   flex: 1;
   transition: .1s ease-in-out;
 }
-
+.cosmere-buttons button:hover {
+  background-color: rgb(70, 48, 23);
+}
 .cosmere-buttons button:active {
   transform: scale(.95);
-  background-color: rgb(70, 48, 23);
+  background-color: rgb(58, 40, 19);
   box-shadow: 2px 2px 5px rgb(146, 122, 90);
-
 }
+
+
 
 .cosmere-content {
   flex: 3;
-  background-color: rgb(128, 128, 128);
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(7, 1fr);
   justify-content: center;
@@ -227,21 +232,34 @@ button:hover {
   text-align: center;
 }
 
-.cosmere-content h2 {
+.titulo-saga {
   grid-column: span 3; /* Hace que el h2 ocupe las 3 columnas */
   text-align: center; /* Centra el texto */
   font-size: 48px;
+  color: white;
+  padding: 20px;
+  background-color: rgba(186, 205, 221, 0.452);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
+.book-section {
+  position: relative;
+  cursor: pointer;
+}
 
-.cosmere-content div {
+.book-section:hover h3 {
+  background-color: #FF9900;
+}
+
+.cosmere-content .book-section {
   border: 1px solid black;
   position: relative;
   max-height: 380px;
   overflow: hidden;
 }
 
-.cosmere-content div h3 {
+.cosmere-content .book-section h3 {
   position: absolute;
   font-size: 14px;
   letter-spacing: 2px;
@@ -254,11 +272,28 @@ button:hover {
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.808);
   color: rgba(24, 24, 24, 0.753);
-  text-transform:uppercase;
+  text-transform: uppercase;
   z-index: 2;
+  overflow: hidden;
 }
 
-.cosmere-content div p {
+.cosmere-content .book-section h3::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: #FF9900; /* Color del efecto */
+  transition: width 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.book-section:hover h3::before {
+  width: 100%;
+}
+
+.cosmere-content .book-section p {
   position: absolute;
   right: 0;
   background-color: black;
@@ -272,14 +307,55 @@ button:hover {
 }
 
 
+/* Contenido del main review individual */
+.book-review {
+  height: 100%;
+  min-height: 100%;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.book-info {
+  flex: 1;
+  height: 100%;
+  margin-right: 10px;
+  background-color: rgba(255, 255, 255, 0.082);
+  text-align: left;
+  padding: 50px;
+  line-height: 1.6;
+  color: white;
+}
+
+.book-title {
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: bold;
+  color: #FF9900;
+}
+
+.publication-year {
+  background-color: rgba(255, 255, 255, 0.11);
+  padding: 5px 15px;
+  margin-bottom: 10px;
+  width: 70px;
+}
+
+.synopsis {
+  font-weight: 100;
+}
+
+
+
+.book-review img {
+  height: 100%;
+  width: auto;
+  flex: 1;
+}
 
 
 
 /* COSMERE ORDEN */
-
-.orden-cosmere {
-  min-height: 100vh;
-}
 
 
 .cosmere-content img.orden-cosmere {

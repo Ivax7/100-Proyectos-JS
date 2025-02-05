@@ -4,57 +4,66 @@
       "title": "Elantris",
       "publication_year": 2005,
       "description": "Sanderson's debut novel, set in the city of Elantris, which was once a place of magic and glory.",
-      "cover_image": "img/books/elantris.jpg"
+      "cover_image": "img/books/elantris.jpg",
+      "synopsis_en": "Elantris was once a city of gods, full of magic and splendor. Now, it is a place of disease and despair. When Prince Raoden is cursed and sent to Elantris, he discovers its dark secrets and seeks to restore its former glory."
     }
   ],
   "Mistborn": [
     {
-      "title": "Mistborn: The Final Empire",
+      "title": "The Final Empire",
       "publication_year": 2006,
-      "description": "The first book in the Mistborn series, introducing a world where ash falls from the sky and mist dominates the night.",
-      "cover_image": "img/books/the-final-empire.jpg"
+      "description": "The first book in the Mistborn series, introducing a world where ash falls from the sky and mist dominates the night. ohfeahfwoiahfwaih",
+      "cover_image": "img/books/the-final-empire.jpg",
+      "synopsis_en": "In addition to being one of the cornerstone works in Sanderson's bibliography, Mistborn is one of the three recommended starting points for entering the Cosmere, alongside Elantris and Warbreaker. The original Mistborn trilogy, also popularly known as Era 1, was Brandon’s second published work. He has mentioned on several occasions that the story has a darker tone compared to his other books and that he was influenced by the grimdark style when writing it. This saga, which begins with The Final Empire, takes place on the planet Scadrial. Imagine a volcanic world drowned in ash, with perpetual rains of soot falling from a reddish sky that barely allows sunlight to pass through. The mists are so thick that it is difficult to see the stars. It is a world of withered plants that struggle—just like the vast majority of its inhabitants—to survive and grow.Mistborn stands out for its iconic and unforgettable characters, a crew of thieves led by the charismatic Kelsier, who becomes involved in a fight against the tyrannical ruler of the Final Empire, the Lord Ruler, who has governed unopposed for a thousand years. A supreme lord who also rewarded his loyal followers with the ability to draw incredible powers from metals. These individuals became known as Mistborn, forming the noble caste that, centuries later, continues to oppress the skaa, a people condemned to slavery for being deemed inferior. Legends tell that a savior will one day rise to free the skaa. Time passes, and with it, a new race of half-bloods is born—individuals with powers once reserved only for the nobles. Tired of waiting for a savior, they decide to rebel and fight for their freedom with their own hands, to finally break free from oppression once and for all. This is how we meet Vin, a young street thief whose life changes when she crosses paths with a man named Kelsier, who recruits her to aid him in his skirmishes"
     },
     {
       "title": "The Well of Ascension",
       "publication_year": 2007,
       "description": "The second installment in the Mistborn series, continuing the saga of a group of rebels with magical abilities.",
-      "cover_image": "img/books/el-pozo-de-la-ascension.jpg"
+      "cover_image": "img/books/el-pozo-de-la-ascension.jpg",
+      "synopsis_en": "With the Lord Ruler defeated, Vin and her allies must navigate political intrigue and an approaching army. Meanwhile, a deeper mystery unfolds surrounding the legendary Well of Ascension."
     },
     {
       "title": "The Hero of Ages",
       "publication_year": 2008,
       "description": "The conclusion to the original Mistborn trilogy, where heroes must unite to save their world.",
-      "cover_image": "img/books/el-heroe-de-las-eras.jpg"
+      "cover_image": "img/books/el-heroe-de-las-eras.jpg",
+      "synopsis_en": "The world is on the brink of destruction. Vin and Elend must uncover the hidden secrets of the past to stop the end of civilization and fulfill the prophecy of the Hero of Ages."
     },
     {
       "title": "The Alloy of Law",
       "publication_year": 2011,
       "description": "A return to the Mistborn world, set 300 years after the original trilogy, blending fantasy with a Wild West setting.",
-      "cover_image": "img/books/the-alloy-of-law.jpg"
+      "cover_image": "img/books/the-alloy-of-law.jpg",
+      "synopsis_en": "Three centuries after the events of the original Mistborn trilogy, lawman Waxillium Ladrian returns to the city of Elendel, where he must balance his noble heritage with his duty as a crime-fighter. When a series of high-profile kidnappings strikes the city, Wax teams up with his eccentric partner Wayne to unravel a conspiracy that threatens the future of Scadrial."
     },
     {
       "title": "Shadows of Self",
       "publication_year": 2015,
       "description": "Continuing the adventures in the Mistborn world, with new challenges and characters.",
-      "cover_image": "img/books/shadows-of-self.jpg"
+      "cover_image": "img/books/shadows-of-self.jpg",
+      "synopsis_en": "As unrest spreads in Elendel, Waxillium Ladrian and Wayne must track down a cunning assassin with mystical abilities. Their pursuit uncovers dark secrets about the city's governance and the true nature of Harmony's power."
     },
     {
       "title": "The Bands of Mourning",
       "publication_year": 2016,
       "description": "Further explorations in the Mistborn universe, uncovering ancient artifacts and secrets.",
-      "cover_image": "img/books/the-bands-of-mourning.jpg"
+      "cover_image": "img/books/the-bands-of-mourning.jpg",
+      "synopsis_en": "Wax and his allies embark on a perilous journey to recover the legendary Bands of Mourning, metalminds rumored to grant immense power. Along the way, they encounter hidden threats and shocking revelations about Scadrial's past and future."
     },
     {
       "title": "Secret History",
       "publication_year": 2016,
       "description": "Una novela corta de Mistborn que revela eventos ocultos durante la trilogía original.",
-      "cover_image": "img/books/secret-history.jpg"
+      "cover_image": "img/books/secret-history.jpg",
+      "synopsis_en": "A hidden story within the Mistborn saga, revealing unseen events and the secret struggles of a key character working behind the scenes of the original trilogy."
     },
     {
       "title": "The Lost Metal",
       "publication_year": 2022,
       "description": "The latest addition to the Mistborn series, unveiling new challenges and mysteries.",
-      "cover_image": "img/books/the-lost-metal.jpg"
+      "cover_image": "img/books/the-lost-metal.jpg",
+      "synopsis_en": "Wax and Wayne face their greatest challenge yet as they uncover a dangerous plot that could change Scadrial forever. With new threats emerging from beyond the planet, they must make impossible choices to save their world."
     }
   ],
   "The Stormlight Archive": [
@@ -62,37 +71,43 @@
       "title": "The Way of Kings",
       "publication_year": 2010,
       "description": "The first book in The Stormlight Archive series, introducing the world of Roshar and its complex characters.",
-      "cover_image": "img/books/the-way-of-kings.jpg"
+      "cover_image": "img/books/the-way-of-kings.jpg",
+      "synopsis_en": "As storms rage across Roshar, powerful figures rise and fall in a world of war, betrayal, and magic. Kaladin, a slave turned warrior, must find his place in a battle that could shape the fate of the world."
     },
     {
       "title": "Words of Radiance",
       "publication_year": 2014,
       "description": "The second book in The Stormlight Archive, delving deeper into the mysteries of Roshar.",
-      "cover_image": "img/books/words-of-radiance.jpg"
+      "cover_image": "img/books/words-of-radiance.jpg",
+      "synopsis_en": "Kaladin and Shallan continue their journeys as the power of the Knights Radiant resurfaces. Secrets of the past threaten to reshape the world, and war looms on the horizon."
     },
     {
       "title": "Edgedancer",
       "publication_year": 2017,
       "description": "Una novela corta del Archivo de las Tormentas que sigue la historia de Lift.",
-      "cover_image": "img/books/edgedancer.jpg"
+      "cover_image": "img/books/edgedancer.jpg",
+      "synopsis_en": "Lift, una joven ladrona con habilidades extraordinarias, se embarca en una misión para detener a un despiadado asesino. Con la ayuda de su inseparable compañero Wyndle, descubrirá su verdadero papel en el mundo de Roshar."
     },
     {
       "title": "Oathbringer",
       "publication_year": 2017,
       "description": "The third installment in The Stormlight Archive, where past secrets come to light.",
-      "cover_image": "img/books/oathbringer.jpg"
+      "cover_image": "img/books/oathbringer.jpg",
+      "synopsis_en": "Dalinar Kholin lucha contra su propio pasado mientras lidera la resistencia contra la amenaza de los Fusionados. Kaladin y Shallan enfrentan nuevos desafíos mientras los secretos de los Heraldos y los Radiantes comienzan a revelarse."
     },
     {
       "title": "Dawnshard",
       "publication_year": 2020,
       "description": "A novella set in The Stormlight Archive universe, providing additional insights.",
-      "cover_image": "img/books/dawnshard.jpg"
+      "cover_image": "img/books/dawnshard.jpg",
+      "synopsis_en": "Rysn, una comerciante en busca de redención, es enviada a una peligrosa expedición en Akinah, un lugar lleno de secretos antiguos. Con la ayuda de su larkin Chiri-Chiri, descubrirá un poder que podría cambiar el destino de Roshar."
     },
     {
       "title": "Rhythm of War",
       "publication_year": 2020,
       "description": "The fourth book in The Stormlight Archive, continuing the epic saga.",
-      "cover_image": "img/books/rhythm-of-war.jpg"
+      "cover_image": "img/books/rhythm-of-war.jpg",
+      "synopsis_en": "Mientras la guerra entre humanos y Fusionados alcanza su punto álgido, Navani Kholin explora los secretos de la luz tormentosa, mientras Kaladin enfrenta su papel en un mundo que cambia rápidamente. La lucha por Roshar continúa en esta entrega épica."
     }
   ],
   "White Sand": [
@@ -100,45 +115,52 @@
       "title": "White Sand Volume 1",
       "publication_year": 2016,
       "description": "El primer volumen de la novela gráfica White Sand, ambientada en el Cosmere.",
-      "cover_image": "img/books/the-white-sand-1.jpg"
+      "cover_image": "img/books/the-white-sand-1.jpg",
+      "synopsis_en": "Kenton, un aspirante a maestro de la arena, sobrevive a una emboscada mortal y se encuentra liderando un grupo de sand masters. Mientras intenta descubrir la verdad tras el ataque, une fuerzas con Khriss, una noble del planeta oscuro Dayside."
     },
     {
       "title": "White Sand Volume 2",
       "publication_year": 2018,
       "description": "El segundo volumen de la novela gráfica White Sand, que continúa la historia en el desierto de Taldain.",
-      "cover_image": "img/books/the-white-sand-2.jpg"
+      "cover_image": "img/books/the-white-sand-2.jpg",
+      "synopsis_en": "Kenton y Khriss continúan su búsqueda de respuestas en el mundo hostil de Taldain. Mientras los secretos de la magia de la arena se desvelan, deben enfrentar conspiraciones y amenazas que podrían cambiar el equilibrio de poder para siempre."
     },
     {
       "title": "White Sand Volume 3",
       "publication_year": 2019,
       "description": "El volumen final de la novela gráfica White Sand.",
-      "cover_image": "img/books/the-white-sand-3.jpg"
+      "cover_image": "img/books/the-white-sand-3.jpg",
+      "synopsis_en": "El desenlace de la saga White Sand lleva a Kenton y Khriss al enfrentamiento definitivo. Mientras luchan contra sus enemigos y descubren la verdad sobre la magia de la arena, el destino de Taldain pende de un hilo."
     }
   ],
-  "Standalone Novels": [
+  "Standalone": [
     {
       "title": "Warbreaker",
       "publication_year": 2009,
       "description": "A standalone novel exploring a world where magic is derived from color and breath.",
-      "cover_image": "img/books/warbreaker.jpg"
+      "cover_image": "img/books/warbreaker.jpg",
+      "synopsis_en": "Two princesses from the kingdom of Idris become entangled in political intrigue and magic when one of them is sent to marry a powerful but mysterious god-king."
     },
     {
-      "title": "The Frugal Wizard's Handbook for Surviving Medieval England",
+      "title": "The Frugal Wizards Handbook for Surviving Medieval England",
       "publication_year": 2023,
       "description": "A humorous and adventurous standalone novel exploring alternate history and wizardry.",
-      "cover_image": "img/books/the-frugal-wizard.jpg"
+      "cover_image": "img/books/the-frugal-wizard.jpg",
+      "synopsis_en": "Un hombre sin memoria despierta en una versión alternativa de la Inglaterra medieval, con solo un manual de instrucciones mágico para ayudarle. Mientras navega este mundo desconocido, descubre que podría ser la clave para salvarlo."
     },
     {
       "title": "Yumi and the Nightmare Painter",
       "publication_year": 2023,
       "description": "A unique fantasy novel set in the Cosmere, blending art, dreams, and powerful magic.",
-      "cover_image": "img/books/yumi-and-the-nightmare-painter.jpg"
+      "cover_image": "img/books/yumi-and-the-nightmare-painter.jpg",
+      "synopsis_en": "Yumi, una sacerdotisa atrapada en un destino impuesto, y Nikaro, un pintor de pesadillas, intercambian cuerpos en un mundo de sueños y realidades. Juntos, deben descubrir la verdad detrás de su conexión y salvar sus mundos del desastre."
     },
     {
-      "title": "Sunlit Man",
+      "title": "The Sunlit Man",
       "publication_year": 2023,
       "description": "Una novela del Cosmere que explora un mundo lleno de soles y secretos.",
-      "cover_image": "img/books/sunlit-man.jpg"
+      "cover_image": "img/books/sunlit-man.jpg",
+      "synopsis_en": "A fugitive with a secret roams a world of endless suns, trying to evade those who hunt him while uncovering the mysteries of the Cosmere."
     }
   ]
 }

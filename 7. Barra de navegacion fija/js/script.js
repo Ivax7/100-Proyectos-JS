@@ -44,6 +44,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+/* Interactive Main Content */
+
+const readingOrder = document.getElementById('order');
+
+readingOrder.addEventListener('click', async() => {
+  cosmereContent.style.display = 'block';
+
+  cosmereContent.innerHTML = `
+    <img class="orden-cosmere" src="img/orden-cosmere.jpg" alt="">
+    `
+})
+
+
 
 /* All books */
 const cosmereContent = document.querySelector(".cosmere-content");
@@ -63,9 +76,9 @@ allBooks.addEventListener('click', async () => {
       Object.values(sagas).forEach((cosmereSaga) => { 
         cosmereSaga.forEach((cosmereBook) => { 
           cosmereContent.innerHTML += `
-            <div>
+            <div class='book-section'>
               <h3>${cosmereBook.title}</h3>
-              <p>"${cosmereBook.publication_year}"</p>
+              <p>${cosmereBook.publication_year}</p>
               <img src="${cosmereBook.cover_image}" alt="${cosmereBook.title}">
             </div>
           `;
@@ -78,22 +91,6 @@ allBooks.addEventListener('click', async () => {
 
   }
 );
-
-
-
-const readingOrder = document.getElementById('order');
-
-readingOrder.addEventListener('click', async() => {
-  cosmereContent.style.display = 'block';
-
-  cosmereContent.innerHTML = `
-    <img class="orden-cosmere" src="img/orden-cosmere.jpg" alt="">
-    `
-})
-
-
-
-
 
 
 const sagaTitles = document.querySelectorAll('.saga-title');
@@ -115,18 +112,25 @@ sagaTitles.forEach(sagaTitle => {
         console.log("Libros de la saga:", sagas[nombreSaga]);
 
         let numLibros = sagas[nombreSaga].length;
+        
+      
+
         let numFilas = Math.ceil(numLibros / 3); // Siempre 3 columnas
 
-        // Establecer grid dinámico
-        cosmereContent.style.display = "grid";
-        cosmereContent.style.gridTemplateColumns = "repeat(3, 1fr)";
-        cosmereContent.style.gridTemplateRows = `repeat(${numFilas}, auto)`; // Se adapta a la cantidad de libros
+        if (numLibros <= 4) {
+          cosmereContent.style.display = "block"; 
+        } else {
+          // Establecer grid dinámico
+          cosmereContent.style.display = "grid";
+          cosmereContent.style.gridTemplateColumns = "repeat(3, 1fr)";
+          cosmereContent.style.gridTemplateRows = `repeat(${numFilas}, auto)`; // Se adapta a la cantidad de libros
+        }
 
         let html = `<h2 class="titulo-saga">${nombreSaga}</h2>`;
 
         sagas[nombreSaga].forEach(libro => {
             html += `
-                <div>
+                <div class='book-section'>
                     <h3>${libro.title}</h3>
                     <p>${libro.publication_year}</p>
                     <img src="${libro.cover_image}" alt="${libro.title}">
@@ -138,6 +142,69 @@ sagaTitles.forEach(sagaTitle => {
     } else {
         console.log("Error: Saga no encontrada en el JSON");
     }
+    } catch (error) {
+      console.error("Error cargando libros:", error);
+    }
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('click', async (event) => {
+    // Verificar si el clic proviene de un `.book` o `.book-section`
+    const clickedBook = event.target.closest('.book');
+    const clickedBookSection = event.target.closest('.book-section');
+
+    // Si no hizo clic en ninguno de los dos, salir de la función
+    if (!clickedBook && !clickedBookSection) return;
+
+    console.log("Click detectado");
+
+    // Limpiar el contenido antes de mostrar el nuevo libro
+    cosmereContent.innerHTML = '';
+
+    // Obtener el título del libro según el elemento clicado
+    const tituloLibro = clickedBook
+      ? clickedBook.textContent.trim() // Si se hizo clic en un `.book`
+      : clickedBookSection.querySelector('h3').textContent.trim(); // Si se hizo clic en `.book-section`
+
+    console.log("Título del libro clickeado:", tituloLibro);
+
+    try {
+      const response = await fetch('/cosmere.json');
+      const sagas = await response.json();
+
+      let libroEncontrado = null;
+
+      for (const saga in sagas) {
+        libroEncontrado = sagas[saga].find(libro => libro.title === tituloLibro);
+        if (libroEncontrado) break;
+      }
+
+      if (libroEncontrado) {
+        console.log("Libro encontrado:", libroEncontrado);
+
+        cosmereContent.style.display = "block";
+
+        function formatSynopsis(text) {
+          return text.split('. ').map(sentence => `<p style="margin-bottom: 10px;">${sentence}.</p>`).join('');
+        }
+
+        cosmereContent.innerHTML = `
+          <div class='book-review'>
+            <div class='book-info'>
+              <h3 class="book-title">${libroEncontrado.title}</h3>
+              <p class='publication-year'>${libroEncontrado.publication_year}</p>
+              <div class='synopsis'>${formatSynopsis(libroEncontrado.synopsis_en)}</div>
+            </div>
+            <div>
+              <img src="${libroEncontrado.cover_image}" alt="${libroEncontrado.title}">
+            </div>
+          </div>
+        `;
+      } else {
+        console.log("Error: Libro no encontrado");
+      }
     } catch (error) {
       console.error("Error cargando libros:", error);
     }
