@@ -36,24 +36,30 @@ loadBooks();
 
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".grid-container");
-
+  
   container.addEventListener("wheel", (event) => {
-      event.preventDefault(); // Evita el scroll vertical predeterminado
-      container.scrollLeft += event.deltaY; // Convierte el scroll vertical en horizontal
+    event.preventDefault(); // Evita el scroll vertical predeterminado
+    container.scrollLeft += event.deltaY; // Convierte el scroll vertical en horizontal
   });
 });
 
 
 /* Interactive Main Content */
 
+
 const readingOrder = document.getElementById('order');
+const timelineSection = document.querySelector('.timeline-section')
+const pageContent = document.querySelector('page-content')
 
 readingOrder.addEventListener('click', async() => {
   cosmereContent.style.display = 'block';
 
-  cosmereContent.innerHTML = `
-    <img class="orden-cosmere" src="img/orden-cosmere.jpg" alt="">
+  cosmereContent.innerHTML = `      
+      <img class="orden-cosmere" src="img/orden-cosmere.jpg" alt="">
     `
+  
+  timelineSection.style.display = 'block';
+  
 })
 
 
@@ -64,9 +70,9 @@ const cosmereContent = document.querySelector(".cosmere-content");
 const allBooks = document.getElementById('all-books');
 
 allBooks.addEventListener('click', async () => {
+  console.log("Hola")
     cosmereContent.innerHTML = '';
 
-    console.log("Hola")
     cosmereContent.style.display = 'grid';
 
     try {
@@ -82,6 +88,9 @@ allBooks.addEventListener('click', async () => {
               <img src="${cosmereBook.cover_image}" alt="${cosmereBook.title}">
             </div>
           `;
+
+          timelineSection.style.display = 'none';
+          
         });
       });
       
@@ -119,6 +128,7 @@ sagaTitles.forEach(sagaTitle => {
 
         if (numLibros <= 4) {
           cosmereContent.style.display = "block"; 
+
         } else {
           // Establecer grid dinámico
           cosmereContent.style.display = "grid";
@@ -139,6 +149,8 @@ sagaTitles.forEach(sagaTitle => {
         });
 
         cosmereContent.innerHTML = html;
+        timelineSection.style.display = 'none';
+
     } else {
         console.log("Error: Saga no encontrada en el JSON");
     }
@@ -202,6 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
         `;
+        timelineSection.style.display = 'none';
+
       } else {
         console.log("Error: Libro no encontrado");
       }
@@ -209,4 +223,23 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error("Error cargando libros:", error);
     }
   });
+});
+
+
+
+
+/* CIRCLES and MODALS MANAGMENT */
+
+const elantrisCircle = document.querySelector('.elantris-circle');
+const elantrisModal = document.querySelector('.modal-elantris');
+
+
+elantrisCircle.addEventListener('click', () => {
+  const currentDisplay = window.getComputedStyle(elantrisModal).display;
+
+  if (currentDisplay === 'block') {
+    elantrisModal.style.display = 'none';
+  } else {
+    elantrisModal.style.display = 'block';
+  }
 });
