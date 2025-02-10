@@ -49,7 +49,7 @@ header {
   border-bottom: 1px solid;
   background-color: hsl(200deg 5.88% 90%);
   position: fixed;
-  z-index: 2;
+  z-index: 9999999999999999;
   width: 100%;
   top: 0;
 }
@@ -167,14 +167,6 @@ span {
   flex: 1;
 }
 
-.cosmere-saga h1 {
-  text-align: center;
-  padding-block: 50px;
-  font-size: 48px;
-  color: white;
-  text-shadow: 2px 2px 15px white;
-}
-
 .cosmere-buttons {
   display: flex;
   width: 100%;
@@ -226,30 +218,10 @@ span {
 .saga {
   margin-bottom: 15px;
   padding: 10px;
-  background-color: white;
+  background-color: transparent;
   background-position: center;
   background-size: cover;
   color: white;
-}
-
-.mistborn {
-  background-image: url('../img/sagas-background/mistborn.jpeg');
-}
-
-.stormlight {
-  background-image: url('../img/sagas-background/stormlight.jpeg');
-}
-
-.elantris {
-  background-image: url('../img/sagas-background/elantris.jpg');
-}
-
-.white-sand {
-  background-image: url('../img/sagas-background/whitesand.jpg');
-}
-
-.standalone {
-  background-image: url('../img/sagas-background/standalone.jpg');
 }
 
 
@@ -270,7 +242,7 @@ span {
   list-style: none;
   padding-left: 5px;
   color: rgb(0, 0, 0);
-  background-color: rgba(255, 255, 255, 0.562);
+  color: white;
 }
 
 .book-list li {
@@ -539,6 +511,7 @@ span {
 
 
 /* INFORMATION CIRCLES */
+
 .circle {
   width: 25px;
   height: 25px;
@@ -560,7 +533,7 @@ span {
   animation: backgroundCircleFade 3s ease-in-out infinite;
 }
 
-.ocaso-circle {
+.sixth-of-the-dusk-circle {
   top: 80px;
 }
 
@@ -568,6 +541,128 @@ span {
   top: 70px;
   left: 200px;
 }
+
+
+.the-emperors-soul-circle {
+  top: 75px;
+  left: 305px;
+}
+
+.the-hope-of-elantris-circle {
+  top: 170px;
+  left: 190px;
+}
+
+.the-final-empire-circle {
+  top: 330px;
+  left: 140px;
+}
+
+.the-well-of-ascension-circle {
+  top: 425px;
+  left: 140px;
+}
+
+.the-hero-of-ages-circle {
+  top: 500px;
+  left: 140px;
+}
+
+.the-eleventh-metal-circle {
+  top: 330px;
+  left: 30px;
+}
+
+.the-alloy-of-law-circle {
+  top: 330px;
+  left: 275px;
+}
+
+.shadows-of-self-circle {
+  top: 425px;
+  left: 275px;
+}
+
+.the-bands-of-mourning-circle {
+  top: 500px;
+  left: 280px;
+}
+
+.the-lost-metal-circle {
+  top: 570px;
+  left: 300px;
+}
+
+.alomante-jak-circle {
+  top: 330px;
+  left: 375px;
+}
+
+.secret-history-circle {
+  top: 500px;
+  left: 370px;
+}
+
+.warbreaker-circle {
+  top: 665px;
+  left: 40px;
+}
+
+.the-way-of-kings-circle {
+  top: 730px;
+  left: 480px;
+}
+
+.words-of-radiance-circle {
+  top: 775px;
+  left: 555px;
+}
+
+.oathbringer-circle {
+  top: 795px;
+  left: 625px;
+}
+
+.rhythm-of-war-circle {
+  top: 805px;
+  left: 695px;
+}
+
+.edgedancer-circle {
+  top: 740px;
+  left: 600px;
+}
+
+.dawnshard-circle {
+  top: 750px;
+  left: 665px;
+}
+
+.the-sunlit-man-circle {
+  top: 755px;
+  left: 745px;
+}
+
+.tress-of-the-emeral-sea-circle {
+  top: 660px;
+  left: 950px;
+}
+
+.white-sand-circle {
+  top: 640px;
+  right: 130px;
+}
+
+.yumi-and-the-nightmare-painter-circle {
+  top: 400px;
+  right: 180px;
+}
+
+.shadows-for-silence-in-the-forests-of-hell-circle {
+  top: 210px;
+  right: 275px;
+}
+
 
 @keyframes backgroundCircleFade {
   0% {
@@ -581,15 +676,146 @@ span {
 }
 
 
-.modal-elantris {
+.modal {
   position: absolute;
   display: none;
   width: 350px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.822);
   color: white;
   border-radius: 12px;
   line-height: 1.6;
   font-weight: 100;
+
+  padding: 40px;
+  z-index: 99999;
+}
+
+.modal-elantris {
   top: 10px;
   left: 250px;
+}
+
+.modal-sixth-of-the-dusk {
+  top: 40px;
+  left: 780px;
+}
+
+.modal-the-emperors-soul {
+  top: 40px;
+  left: 350px;
+}
+
+.modal-the-hope-of-elantris {
+  top: 130px;
+  left: 240px;
+}
+
+.modal-the-final-empire {
+  top: 270px;
+  left: 200px;
+}
+
+.modal-the-well-of-ascension {
+  top: 350px;
+  left: 200px;
+}
+
+.modal-the-hero-of-ages {
+  top: 450px;
+  left: 200px;
+}
+
+.modal-the-eleventh-metal {
+  top: 250px;
+  left: 80px;
+}
+
+.modal-the-alloy-of-law {
+  top: 250px;
+  left: 350px;
+}
+
+.modal-shadows-of-self {
+  top: 350px;
+  left: 350px;
+}
+
+.modal-the-bands-of-mourning {
+  top: 430px;
+  left: 320px;
+}
+
+.modal-the-lost-metal {
+  top: 500px;
+  left: 340px;
+}
+
+.modal-alomante-jak {
+  top: 270px;
+  left: 420px;
+}
+
+.modal-secret-history {
+  top: 420px;
+  left: 420px;
+}
+
+.modal-warbreaker {
+  top: 600px;
+  left: 100px;
+}
+
+.modal-the-way-of-kings {
+  top: 550px;
+  left: 300px;
+}
+
+.modal-words-of-radiance {
+  top: 600px;
+  left: 400px;
+}
+
+.modal-oathbringer {
+  top: 630px;
+  left: 470px;
+}
+
+.modal-rhythm-of-war {
+  top: 660px;
+  left: 550px;
+}
+
+.modal-edgedancer {
+  top: 600px;
+  left: 450px;
+}
+
+.modal-dawnshard {
+  top: 600px;
+  left: 520px;
+}
+
+.modal-the-sunlit-man {
+  top: 600px;
+  left: 600px;
+}
+
+.modal-tress-of-the-emeral-sea {
+  top: 600px;
+  right: 100px;
+}
+
+.modal-white-sand {
+  top: 570px;
+  right: 200px;
+}
+
+.modal-yumi-and-the-nightmare-painter {
+  top: 330px;
+  right: 230px;
+}
+
+.modal-shadows-for-silence-in-the-forests-of-hell {
+  top: 270px;
+  right: 120px;
 }

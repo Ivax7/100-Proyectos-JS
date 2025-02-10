@@ -230,16 +230,71 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* CIRCLES and MODALS MANAGMENT */
 
-const elantrisCircle = document.querySelector('.elantris-circle');
-const elantrisModal = document.querySelector('.modal-elantris');
+const circles = document.querySelectorAll('.circle');
+
+circles.forEach(circle => {
+  circle.addEventListener('click', async () => {
+    // Obtener el nombre de la clase
+    const classList = [...circle.classList]; // Convertimos la lista en un array
+    const filteredClass = classList.find(cls => cls !== 'circle'); // Filtramos la clase "circle"
+
+    if (!filteredClass) return; // Evitamos errores si no hay más clases
+
+    // Limpiar el nombre: quitar "circle", reemplazar guiones y limpiar espacios extra
+    const formattedTitle = filteredClass.replace(/circle/g, ' ').trim();
+    const finalTitle = formattedTitle.replace(/-/g, ' ').trim();
 
 
-elantrisCircle.addEventListener('click', () => {
-  const currentDisplay = window.getComputedStyle(elantrisModal).display;
+    // Buscamos en el JSON el libro con el mismo título
+    try {
+      const response = await fetch('/cosmere.json');
+      const sagas = await response.json();
 
-  if (currentDisplay === 'block') {
-    elantrisModal.style.display = 'none';
-  } else {
-    elantrisModal.style.display = 'block';
-  }
+      let libroEncontrado = null;
+
+      // Iterar sobre las sagas y buscar el libro con el título formateado
+      for (const saga in sagas) {
+        libroEncontrado = sagas[saga].find(libro => libro.title.toLowerCase() === finalTitle.toLowerCase());
+        if (libroEncontrado) break;
+      }
+
+      if (libroEncontrado) {
+
+        // Convertir el título a minúsculas y reemplazar los espacios con guiones
+        let nombreClase = libroEncontrado.title.toLowerCase().replace(/ /g, '-');
+
+        // Buscar si ya existe el modal con ese nombre
+        let modal = document.querySelector(`.modal-${nombreClase}`);
+
+        if (modal) {
+          // Si el modal ya existe, alternamos su visibilidad
+          const currentDisplay = window.getComputedStyle(modal).display;
+
+          if (currentDisplay === 'block') {
+            modal.style.display = 'none'; // Ocultar si está visible
+          } else {
+            modal.style.display = 'block'; // Mostrar si está oculto
+          }
+        } else {
+          // Si no existe, creamos y mostramos el modal
+          modal = document.createElement('div');
+          modal.classList.add(`modal-${nombreClase}`);
+          modal.classList.add(`modal`);
+          modal.innerHTML = `
+            <p>${libroEncontrado.description}</p>
+          `;
+
+          // Agregar el modal al contenido de cosmere
+          cosmereContent.appendChild(modal);
+
+          // Mostrar el modal
+          modal.style.display = 'block'; // Cambiar display a block para que sea visible
+        }
+      } else {
+        console.log("⚠️ No se encontró un libro con ese título en el JSON.");
+      }
+    } catch (error) {
+      console.error("❌ Error al cargar cosmere.json:", error);
+    }
+  });
 });

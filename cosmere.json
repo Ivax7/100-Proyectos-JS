@@ -112,7 +112,7 @@
   ],
   "White Sand": [
     {
-      "title": "White Sand Volume 1",
+      "title": "White Sand",
       "publication_year": 2016,
       "description": "El primer volumen de la novela gráfica White Sand, ambientada en el Cosmere.",
       "cover_image": "img/books/the-white-sand-1.jpg",
@@ -161,6 +161,56 @@
       "description": "Una novela del Cosmere que explora un mundo lleno de soles y secretos.",
       "cover_image": "img/books/sunlit-man.jpg",
       "synopsis_en": "Years ago, he had comrades-in-arms and a cause to believe in. But now, the man known as Nomad knows only a life on the run. Forced to jump from world to world within the Cosmere whenever the relentless Night Brigade gets too close, Nomad finds himself on a new planet—immediately caught in the conflict between a tyrant and the rebels who seek only to avoid becoming mindless slaves. All of this unfolds under the constant threat of a scorching dawn, whose heat melts even stone. Unable to understand the local language, can Nomad navigate the conflict and gather enough power to escape before his mind or body pays the ultimate price?"
+    },
+    {
+      "title": "Sixth of the Dusk",
+      "publication_year": 2014,
+      "description": "Un relato del Cosmere ambientado en un mundo salvaje lleno de misterios y peligros.",
+      "cover_image": "img/books/sixth-of-the-dusk.jpg",
+      "synopsis_en": "On the deadly island of Patji, a solitary trapper named Dusk survives using the abilities granted by his Aviar, magical birds that bestow unique powers. But when outsiders from the wider Cosmere arrive, bringing advanced technology and a hunger for knowledge, Dusk faces a dilemma that could reshape his world forever. Can he protect his home from destruction, or will progress come at an unbearable cost?"
+    },
+    {
+      "title": "The Emperors Soul",
+      "publication_year": 2012,
+      "description": "A novella set in the Cosmere, exploring the art of Forgery, a magical ability that can rewrite the past.",
+      "cover_image": "img/books/the-emperors-soul.jpg",
+      "synopsis_en": "In the world of Sel, where people have the ability to use Forgery to change objects and even rewrite history, Shai, a skilled Forger, is sentenced to death after attempting to assassinate the emperor. However, she is given an unusual second chance—if she can use her skills to restore the emperor’s soul, which has been damaged beyond repair, she may avoid execution. Time is running out, and Shai must navigate the political intrigue of the palace while facing the moral dilemmas of rewriting history itself."
+    },
+    {
+      "title": "The hope of Elantris",
+      "publication_year": 2009,
+      "description": "Un relato del Cosmere que expande la historia de Elantris, explorando más a fondo el destino de sus habitantes.",
+      "cover_image": "img/books/la-esperanza-de-elantris.jpg",
+      "synopsis_en": "Set after the events of *Elantris*, *The Hope of Elantris* takes place when the city of Elantris begins to recover after its fall. The story follows a new character, a young scholar, who discovers a way to heal the people of Elantris and perhaps restore it to its former glory. But his journey is filled with danger and unexpected consequences, as political forces, old mysteries, and ancient magic collide in the fight for control over Elantris' future."
+    },
+    {
+      "title": "The eleventh metal",
+      "publication_year": 2016,
+      "description": "Un relato corto situado en el mundo de Mistborn que explora el misterioso metal desconocido y sus implicaciones.",
+      "cover_image": "img/books/el-undecimo-metal.jpg",
+      "synopsis_en": "In *The Eleventh Metal*, we follow a young Kelsier, who was just a member of a small crew in the rough streets of Luthadel. While investigating a new and mysterious metal that appears to hold strange powers, Kelsier discovers more than just a new piece of Allomantic lore. This tale offers a glimpse into his early life, long before he becomes the charismatic leader of the rebellion in *Mistborn*. As Kelsier begins to understand the true potential of the Eleventh Metal, he realizes it could change everything."
+    },
+    {
+      "title": "Alomante Jak",
+      "publication_year": 2018,
+      "description": "Un relato corto que sigue las aventuras de Jak, un carismático y astuto alomante en el mundo de Mistborn.",
+      "cover_image": "img/books/arcano-ilimitado1.png",
+      "synopsis_en": "In *Alomancer Jak*, we follow a swashbuckling, charming character named Jak who possesses powerful Allomantic abilities. Jak uses his talents to gain wealth and fame, but his carefree life is disrupted when a new enemy emerges. This short story showcases the use of Allomancy in a different context, as Jak navigates challenges and confronts dangerous foes. The story offers an exciting and humorous take on the Mistborn world, with a focus on Jak’s unique character and his adventures."
+    },
+    {
+      "title": "Tress of the emeral sea",
+      "publication_year": 2022,
+      "description": "Una fascinante historia que explora un mundo lleno de magia, mar y secretos ancestrales.",
+      "cover_image": "img/books/trenza-del-mar-esmeralda.jpg",
+      "synopsis_en": "In *The Emerald Sea Braid*, the protagonist lives in a world where the oceans are more than just vast waters—they are a source of ancient magic and powerful, dangerous forces. The story centers on a young person who must navigate the treacherous currents of both the ocean and their own life choices. As they embark on a journey to uncover a hidden legacy, they find themselves entangled in a conflict that could reshape the very fabric of their society. With the ocean as both a threat and a guide, the character must unravel the mystery of the Sea Braid and confront their destiny."
+    },
+    {
+      "title": "Shadows for Silence in the Forests of Hell",
+      "publication_year": 2013,
+      "description": "Una historia fascinante del Cosmere ambientada en un mundo oscuro y peligroso, donde los personajes luchan por sobrevivir.",
+      "cover_image": "img/books/shadows-for-silence-in-the-forests-of-hell.jpg",
+      "synopsis_en": "In *Shadows for Silence in the Forests of Hell*, the protagonist, Silence, is a bounty hunter in a land where the forest is a terrifying place, full of malevolent spirits and deadly creatures. The story follows Silence as she navigates the dangers of this world, using her wits and skills to survive in a brutal and hostile environment. Along the way, she must make difficult decisions, confront her past, and deal with a series of moral dilemmas. The novel explores themes of survival, vengeance, and the supernatural in a dark, unforgiving world."
     }
+    
   ]
 }
