@@ -6,6 +6,13 @@
       "description": "Sanderson's debut novel, set in the city of Elantris, which was once a place of magic and glory.",
       "cover_image": "img/books/elantris.jpg",
       "synopsis_en": "Elantris was once a city of gods, full of magic and splendor. Now, it is a place of disease and despair. When Prince Raoden is cursed and sent to Elantris, he discovers its dark secrets and seeks to restore its former glory."
+    },
+    {
+      "title": "The hope of Elantris",
+      "publication_year": 2009,
+      "description": "Un relato del Cosmere que expande la historia de Elantris, explorando más a fondo el destino de sus habitantes.",
+      "cover_image": "img/books/the-hope-of-elantris.jpg",
+      "synopsis_en": "Set after the events of *Elantris*, *The Hope of Elantris* takes place when the city of Elantris begins to recover after its fall. The story follows a new character, a young scholar, who discovers a way to heal the people of Elantris and perhaps restore it to its former glory. But his journey is filled with danger and unexpected consequences, as political forces, old mysteries, and ancient magic collide in the fight for control over Elantris' future."
     }
   ],
   "Mistborn": [
@@ -31,6 +38,13 @@
       "synopsis_en": "The information in this summary contains spoilers for The Final Empire and The Well of Ascension.Luthadel has been destroyed, and with it, Kelsier’s crew’s world crumbles, changing forever. The painful farewell to friends, comrades, and lovers drags along most of the survivors' beliefs, as they become truly aware—perhaps for the first time—of the magnitude of the disaster they now face. What do you do when everything you once believed to be true is twisted into a cruel mockery? The future is uncertain. Vin carries the burden of having released Ruin, the feared antagonist of Preservation, in a heroic act where, summoning all her willpower, she chose to forgo saving the life of her beloved Elend in an altruistic sacrifice—one that turns into the worst nightmare imaginable. The mists now kill both day and night, and the ever-dimming daylight is no longer a sanctuary. With increasingly violent volcanic eruptions, relentless ashfall threatening to wipe out all life on Scadrial, and Ruin rampaging across the land, can our heroes find a way to emerge victorious?"
     },
     {
+      "title": "The Eleventh Metal",
+      "publication_year": 2016,
+      "description": "Un relato corto situado en el mundo de Mistborn que explora el misterioso metal desconocido y sus implicaciones.",
+      "cover_image": "img/books/the-eleventh-metal.jpg",
+      "synopsis_en": "In *The Eleventh Metal*, we follow a young Kelsier, who was just a member of a small crew in the rough streets of Luthadel. While investigating a new and mysterious metal that appears to hold strange powers, Kelsier discovers more than just a new piece of Allomantic lore. This tale offers a glimpse into his early life, long before he becomes the charismatic leader of the rebellion in *Mistborn*. As Kelsier begins to understand the true potential of the Eleventh Metal, he realizes it could change everything."
+    },
+    {
       "title": "The Alloy of Law",
       "publication_year": 2011,
       "description": "A return to the Mistborn world, set 300 years after the original trilogy, blending fantasy with a Wild West setting.",
@@ -52,18 +66,25 @@
       "synopsis_en": "The Elendel Basin is a powder keg. Worker discontent is growing, compounded by irreconcilable differences between the capital and the other cities in the basin. Elendel claims authority over them, while its inhabitants denounce the oppression they feel subjected to. Suddenly, Waxillium Ladrian hears that a kandra scholar may have discovered the legendary *Bands of Mourning*—a weapon capable of unleashing destruction and upending the delicate balance of power in the basin. But chasing myths is not among the concerns of a lawman like him, especially when faced with more immediate threats. Yet, what can he do when he suspects he has been deceived by God himself? The resulting revelation will shake the very foundations of everything you thought you knew about the world of *Mistborn*."
     },
     {
-      "title": "Secret History",
-      "publication_year": 2016,
-      "description": "Una novela corta de Mistborn que revela eventos ocultos durante la trilogía original.",
-      "cover_image": "img/books/secret-history.jpg",
-      "synopsis_en": "A hidden story within the Mistborn saga, revealing unseen events and the secret struggles of a key character working behind the scenes of the original trilogy."
-    },
-    {
       "title": "The Lost Metal",
       "publication_year": 2022,
       "description": "The latest addition to the Mistborn series, unveiling new challenges and mysteries.",
       "cover_image": "img/books/the-lost-metal.jpg",
       "synopsis_en": "Waxillium Ladrian, lawman-turned-senator of the great city, has spent years hunting down the elusive organization known as the Set—whose leaders include his late uncle and his sister—ever since they began abducting people with Allomantic lineage. When detective Marasi Colms and her partner Wayne uncover an illegal weapons cache bound for the outer city of Bilming, a new lead emerges. The growing conflict between Elendel and the outer cities plays right into the Set’s hands. Their influence now extends into the very heart of Elendel’s Senate—whose corruption Wax and Steris are determined to expose—and Bilming is even more entangled in their schemes than they had feared. After Wax discovers a new type of explosive capable of unleashing unprecedented destruction—and realizes the Set must already have it—an immortal kandra serving Scadrial’s god, Harmony, reveals that Bilming has fallen under the influence of another deity: Trell, the god worshipped by the Set. But Trell is not the only force at play from the wider Cosmere. Marasi is approached by off-world figures with strange abilities, who claim their mission is to protect Scadrial… at any cost. Wax must decide whether to set aside his troubled relationship with God and become the sword that Harmony has been preparing him to be. If no one steps up to act as the hero Scadrial needs, the planet and its millions of inhabitants will face sudden and catastrophic ruin."
+    },
+    {
+      "title": "Alomante Jak",
+      "publication_year": 2018,
+      "description": "Un relato corto que sigue las aventuras de Jak, un carismático y astuto alomante en el mundo de Mistborn.",
+      "cover_image": "img/books/arcano-ilimitado1.png",
+      "synopsis_en": "In *Alomancer Jak*, we follow a swashbuckling, charming character named Jak who possesses powerful Allomantic abilities. Jak uses his talents to gain wealth and fame, but his carefree life is disrupted when a new enemy emerges. This short story showcases the use of Allomancy in a different context, as Jak navigates challenges and confronts dangerous foes. The story offers an exciting and humorous take on the Mistborn world, with a focus on Jak’s unique character and his adventures."
+    },
+    {
+      "title": "Secret History",
+      "publication_year": 2016,
+      "description": "Una novela corta de Mistborn que revela eventos ocultos durante la trilogía original.",
+      "cover_image": "img/books/secret-history.jpg",
+      "synopsis_en": "A hidden story within the Mistborn saga, revealing unseen events and the secret struggles of a key character working behind the scenes of the original trilogy."
     }
   ],
   "The Stormlight Archive": [
@@ -82,18 +103,18 @@
       "synopsis_en": "The acclaimed sequel to The Way of Kings is, like the first volume of The Stormlight Archive, the result of over a decade of worldbuilding and writing, crafted into a masterpiece of modern fantasy spanning ten volumes. With this work, Brandon Sanderson cements his place as one of the fastest-growing authors in the genre worldwide. The Knights Radiant must rise again. The ancient oaths have finally been spoken. Men search for what was lost. I fear that this search will destroy them. Such is the nature of magic. A broken soul has cracks where something else can seep in. The Surges, the powers of creation itself, can embrace a fractured soul—but they can also widen its fissures. The Windrunner is lost in a shattered land, caught between vengeance and honor. The Lightweaver, slowly consumed by her past, seeks the lie she must become. The Bondsmith, born in blood and death, now struggles to rebuild what was broken. The Explorer, caught between the fates of two peoples, must choose between a slow death and a terrible betrayal of all she holds dear. It is time to awaken them—for the Everstorm looms. And the assassin has arrived."
     },
     {
-      "title": "Edgedancer",
-      "publication_year": 2017,
-      "description": "Una novela corta del Archivo de las Tormentas que sigue la historia de Lift.",
-      "cover_image": "img/books/edgedancer.jpg",
-      "synopsis_en": "Lift, una joven ladrona con habilidades extraordinarias, se embarca en una misión para detener a un despiadado asesino. Con la ayuda de su inseparable compañero Wyndle, descubrirá su verdadero papel en el mundo de Roshar."
-    },
-    {
       "title": "Oathbringer",
       "publication_year": 2017,
       "description": "The third installment in The Stormlight Archive, where past secrets come to light.",
       "cover_image": "img/books/oathbringer.jpg",
       "synopsis_en": "Humanity faces a new Desolation with the return of the Voidbringers—an enemy as vast in number as in thirst for vengeance. The fleeting victory of Dalinar Kholin’s Alethi armies has come at a cost: the Parshendi have summoned the violent Everstorm, sweeping across the world and awakening the once-docile parshmen to the horrifying realization that they have been enslaved by humans for a thousand years. Meanwhile, on a desperate journey to warn his family of the coming threat, Kaladin wonders whether the sudden wrath of the parshmen might be justified. Within the tower-city of Urithiru, sheltered from the storm, Shallan Davar delves into the wonders of the ancient Knights Radiant stronghold, uncovering dark secrets lurking in its depths. At the same time, Dalinar realizes that his sacred mission to unify his homeland of Alethkar was too narrow in scope. Unless all nations can set aside their past grudges and stand together, not even the return of the Knights Radiant will be enough to stop the end of civilization."
+    },
+    {
+      "title": "Rhythm of War",
+      "publication_year": 2020,
+      "description": "The fourth book in The Stormlight Archive, continuing the epic saga.",
+      "cover_image": "img/books/rhythm-of-war.jpg",
+      "synopsis_en": "There are secrets we have kept for too long. Watchers. Sleepless. Eternal. And soon, they will no longer be ours. The One Who Is Three searches, unknowingly, for the captured soul. The imprisoned spren, long forgotten. Can she free her own soul in time to uncover the knowledge that dooms all the peoples of Roshar? The Fallen Soldier caresses and loves the spear, even as the weapon pierces his own flesh. He walks ever forward, ever into the darkness, without light. He can carry nothing with him except what he himself can ignite.The Broken Sister understands her mistakes and believes she is one. She seems far removed from her ancestors, yet she does not realize they are the ones bearing her upon their shoulders. Toward victory, and toward that silence—the most important silence of all. And the Mother of Machines, the most crucial of them all, dances with liars in a grand waltz. She must unmask them, grasp their hidden truths, and bring them into the world. She must recognize that the worst lies are the ones she tells herself. If she does, our secrets will finally become truths."
     },
     {
       "title": "Dawnshard",
@@ -103,11 +124,18 @@
       "synopsis_en": "WARNING: *Dawnshard* is a short story that bridges the gap between *Oathbringer* and *Rhythm of War*, and reading it separately may result in significant spoilers. After the discovery of a ghost ship whose crew seemingly perished trying to reach the storm-wrapped island of Akinah, Navani Kholin must send an expedition to ensure the island has not fallen into enemy hands. The Knights Radiant who fly too close to Akinah find their Stormlight mysteriously drained, forcing the journey to be undertaken by sea. Shipowner Rysn Ftori lost the use of her legs but gained the companionship of Chiri-Chiri, a winged larkin that feeds on Stormlight—belonging to a species thought to be extinct. But Rysn’s beloved creature has fallen ill, and the only hope for its recovery may lie in Akinah, the ancestral home of the larkin. With the help of Lopen, the Windrunner who once lacked an arm, Rysn must accept Navani’s mission and sail into the heart of a deadly storm from which no one has ever returned. If her crew fails to uncover the hidden island’s secrets before awakening the wrath of its ancient guardians, the fate of Roshar—and the entire Cosmere—will hang by a thread."
     },
     {
-      "title": "Rhythm of War",
-      "publication_year": 2020,
-      "description": "The fourth book in The Stormlight Archive, continuing the epic saga.",
-      "cover_image": "img/books/rhythm-of-war.jpg",
-      "synopsis_en": "There are secrets we have kept for too long. Watchers. Sleepless. Eternal. And soon, they will no longer be ours. The One Who Is Three searches, unknowingly, for the captured soul. The imprisoned spren, long forgotten. Can she free her own soul in time to uncover the knowledge that dooms all the peoples of Roshar? The Fallen Soldier caresses and loves the spear, even as the weapon pierces his own flesh. He walks ever forward, ever into the darkness, without light. He can carry nothing with him except what he himself can ignite.The Broken Sister understands her mistakes and believes she is one. She seems far removed from her ancestors, yet she does not realize they are the ones bearing her upon their shoulders. Toward victory, and toward that silence—the most important silence of all. And the Mother of Machines, the most crucial of them all, dances with liars in a grand waltz. She must unmask them, grasp their hidden truths, and bring them into the world. She must recognize that the worst lies are the ones she tells herself. If she does, our secrets will finally become truths."
+      "title": "Edgedancer",
+      "publication_year": 2017,
+      "description": "Una novela corta del Archivo de las Tormentas que sigue la historia de Lift.",
+      "cover_image": "img/books/edgedancer.jpg",
+      "synopsis_en": "Lift, una joven ladrona con habilidades extraordinarias, se embarca en una misión para detener a un despiadado asesino. Con la ayuda de su inseparable compañero Wyndle, descubrirá su verdadero papel en el mundo de Roshar."
+    },
+    {
+      "title": "The Sunlit Man",
+      "publication_year": 2023,
+      "description": "Una novela del Cosmere que explora un mundo lleno de soles y secretos.",
+      "cover_image": "img/books/sunlit-man.jpg",
+      "synopsis_en": "Years ago, he had comrades-in-arms and a cause to believe in. But now, the man known as Nomad knows only a life on the run. Forced to jump from world to world within the Cosmere whenever the relentless Night Brigade gets too close, Nomad finds himself on a new planet—immediately caught in the conflict between a tyrant and the rebels who seek only to avoid becoming mindless slaves. All of this unfolds under the constant threat of a scorching dawn, whose heat melts even stone. Unable to understand the local language, can Nomad navigate the conflict and gather enough power to escape before his mind or body pays the ultimate price?"
     }
   ],
   "White Sand": [
@@ -156,13 +184,6 @@
       "synopsis_en": "Yumi comes from a land of gardens, meditation, and spirits, while Painter lives in a world of darkness, technology, and nightmares. When their lives become mysteriously intertwined, will they be able to set aside their differences and work together to uncover the mysteries of their situation—and save their respective communities from certain disaster? A Note from Brandon Sanderson: 'I had wanted to write a fantasy novel for years where the protagonists had what they considered normal jobs, but which would seem fantastical to us as readers. Additionally, my wife encouraged me to include more romance in my stories. When I brought together two people whose work seemed magical to each other, Yumi and the Nightmare Painter was born. This particular novel was a special gift for my wife—a gift that we are both delighted to share with you now.'"
     },
     {
-      "title": "The Sunlit Man",
-      "publication_year": 2023,
-      "description": "Una novela del Cosmere que explora un mundo lleno de soles y secretos.",
-      "cover_image": "img/books/sunlit-man.jpg",
-      "synopsis_en": "Years ago, he had comrades-in-arms and a cause to believe in. But now, the man known as Nomad knows only a life on the run. Forced to jump from world to world within the Cosmere whenever the relentless Night Brigade gets too close, Nomad finds himself on a new planet—immediately caught in the conflict between a tyrant and the rebels who seek only to avoid becoming mindless slaves. All of this unfolds under the constant threat of a scorching dawn, whose heat melts even stone. Unable to understand the local language, can Nomad navigate the conflict and gather enough power to escape before his mind or body pays the ultimate price?"
-    },
-    {
       "title": "Sixth of the Dusk",
       "publication_year": 2014,
       "description": "Un relato del Cosmere ambientado en un mundo salvaje lleno de misterios y peligros.",
@@ -177,38 +198,17 @@
       "synopsis_en": "In the world of Sel, where people have the ability to use Forgery to change objects and even rewrite history, Shai, a skilled Forger, is sentenced to death after attempting to assassinate the emperor. However, she is given an unusual second chance—if she can use her skills to restore the emperor’s soul, which has been damaged beyond repair, she may avoid execution. Time is running out, and Shai must navigate the political intrigue of the palace while facing the moral dilemmas of rewriting history itself."
     },
     {
-      "title": "The hope of Elantris",
-      "publication_year": 2009,
-      "description": "Un relato del Cosmere que expande la historia de Elantris, explorando más a fondo el destino de sus habitantes.",
-      "cover_image": "img/books/la-esperanza-de-elantris.jpg",
-      "synopsis_en": "Set after the events of *Elantris*, *The Hope of Elantris* takes place when the city of Elantris begins to recover after its fall. The story follows a new character, a young scholar, who discovers a way to heal the people of Elantris and perhaps restore it to its former glory. But his journey is filled with danger and unexpected consequences, as political forces, old mysteries, and ancient magic collide in the fight for control over Elantris' future."
-    },
-    {
-      "title": "The eleventh metal",
-      "publication_year": 2016,
-      "description": "Un relato corto situado en el mundo de Mistborn que explora el misterioso metal desconocido y sus implicaciones.",
-      "cover_image": "img/books/el-undecimo-metal.jpg",
-      "synopsis_en": "In *The Eleventh Metal*, we follow a young Kelsier, who was just a member of a small crew in the rough streets of Luthadel. While investigating a new and mysterious metal that appears to hold strange powers, Kelsier discovers more than just a new piece of Allomantic lore. This tale offers a glimpse into his early life, long before he becomes the charismatic leader of the rebellion in *Mistborn*. As Kelsier begins to understand the true potential of the Eleventh Metal, he realizes it could change everything."
-    },
-    {
-      "title": "Alomante Jak",
-      "publication_year": 2018,
-      "description": "Un relato corto que sigue las aventuras de Jak, un carismático y astuto alomante en el mundo de Mistborn.",
-      "cover_image": "img/books/arcano-ilimitado1.png",
-      "synopsis_en": "In *Alomancer Jak*, we follow a swashbuckling, charming character named Jak who possesses powerful Allomantic abilities. Jak uses his talents to gain wealth and fame, but his carefree life is disrupted when a new enemy emerges. This short story showcases the use of Allomancy in a different context, as Jak navigates challenges and confronts dangerous foes. The story offers an exciting and humorous take on the Mistborn world, with a focus on Jak’s unique character and his adventures."
-    },
-    {
-      "title": "Tress of the emeral sea",
+      "title": "Tress of the Emeral Sea",
       "publication_year": 2022,
       "description": "Una fascinante historia que explora un mundo lleno de magia, mar y secretos ancestrales.",
-      "cover_image": "img/books/trenza-del-mar-esmeralda.jpg",
+      "cover_image": "img/books/tress-of-the-emerald-sea.jpg",
       "synopsis_en": "In *The Emerald Sea Braid*, the protagonist lives in a world where the oceans are more than just vast waters—they are a source of ancient magic and powerful, dangerous forces. The story centers on a young person who must navigate the treacherous currents of both the ocean and their own life choices. As they embark on a journey to uncover a hidden legacy, they find themselves entangled in a conflict that could reshape the very fabric of their society. With the ocean as both a threat and a guide, the character must unravel the mystery of the Sea Braid and confront their destiny."
     },
     {
       "title": "Shadows for Silence in the Forests of Hell",
       "publication_year": 2013,
       "description": "Una historia fascinante del Cosmere ambientada en un mundo oscuro y peligroso, donde los personajes luchan por sobrevivir.",
-      "cover_image": "img/books/shadows-for-silence-in-the-forests-of-hell.jpg",
+      "cover_image": "img/books/shadows-for-silence-in-the-forest-of-hell.jpg",
       "synopsis_en": "In *Shadows for Silence in the Forests of Hell*, the protagonist, Silence, is a bounty hunter in a land where the forest is a terrifying place, full of malevolent spirits and deadly creatures. The story follows Silence as she navigates the dangers of this world, using her wits and skills to survive in a brutal and hostile environment. Along the way, she must make difficult decisions, confront her past, and deal with a series of moral dilemmas. The novel explores themes of survival, vengeance, and the supernatural in a dark, unforgiving world."
     }
     

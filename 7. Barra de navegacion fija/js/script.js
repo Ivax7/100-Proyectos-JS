@@ -1,35 +1,9 @@
 
-
-async function loadBooks() {
-  try {
-      const response = await fetch('/books.json');
-      const books = await response.json();
-      const gallery = document.getElementById("gallery");
-
-      books.forEach((book, index) => {
-          let rowSpan = Math.random() > 0.5 ? 2 : 1; 
-          let rowStart = rowSpan === 2 ? Math.floor(Math.random() * 2) + 1 :  Math.floor(Math.random() * 2) + 2; 
-
-          let imgElement = document.createElement("div");
-          imgElement.classList.add("grid-item");
-          if (rowSpan === 2) imgElement.classList.add("span-2");
-          imgElement.style.gridRow = `${rowStart} / span ${rowSpan}`;
-          imgElement.style.gridColumn = `${index + 1} / span 1`;
-
-          let img = document.createElement("img");
-          img.src = book.cover_image;
-          img.alt = book.title;
-
-          imgElement.appendChild(img);
-          gallery.appendChild(imgElement);
-      });
-  } catch (error) {
-      console.error("Error cargando libros:", error);
-  }
-}
-
-loadBooks();
-
+import { horizontalScroll, loadBooks } from "./parts/horizontal-scroll.js";
+document.addEventListener("DOMContentLoaded", () => {
+  loadBooks();
+  horizontalScroll();
+});
 
 /* Scroll Horizontal */
 
@@ -56,6 +30,46 @@ readingOrder.addEventListener('click', async() => {
 
   cosmereContent.innerHTML = `      
       <img class="orden-cosmere" src="img/orden-cosmere.jpg" alt="">
+
+      <span class="circle sixth-of-the-dusk-circle"></span>
+        
+        <span class="circle elantris-circle"></span>
+        
+        <span class="circle the-emperors-soul-circle"></span>
+        
+        <span class="circle the-hope-of-elantris-circle"></span>
+        
+        <span class="circle the-final-empire-circle"></span>
+        <span class="circle the-well-of-ascension-circle"></span>
+        <span class="circle the-hero-of-ages-circle"></span>
+        
+        <span class="circle the-eleventh-metal-circle"></span>
+        
+        <span class="circle the-alloy-of-law-circle"></span>
+        <span class="circle shadows-of-self-circle"></span>
+        <span class="circle the-bands-of-mourning-circle"></span>
+        <span class="circle the-lost-metal-circle"></span>
+        
+        <span class="circle alomante-jak-circle"></span>
+        
+        <span class="circle secret-history-circle"></span>
+        
+        <span class="circle warbreaker-circle"></span>
+        
+        <span class="circle the-way-of-kings-circle"></span>
+        <span class="circle words-of-radiance-circle"></span>
+        <span class="circle oathbringer-circle"></span>
+        <span class="circle rhythm-of-war-circle"></span>
+        
+        <span class="circle edgedancer-circle"></span>
+        <span class="circle dawnshard-circle"></span>
+        <span class="circle the-sunlit-man-circle"></span>
+
+        <span class="circle tress-of-the-emeral-sea-circle"></span>
+      
+        <span class="circle white-sand-circle"></span>
+        <span class="circle yumi-and-the-nightmare-painter-circle"></span>
+        <span class="circle shadows-for-silence-in-the-forests-of-hell-circle"></span>
     `
   
   timelineSection.style.display = 'block';
@@ -70,7 +84,6 @@ const cosmereContent = document.querySelector(".cosmere-content");
 const allBooks = document.getElementById('all-books');
 
 allBooks.addEventListener('click', async () => {
-  console.log("Hola")
     cosmereContent.innerHTML = '';
 
     cosmereContent.style.display = 'grid';
@@ -122,8 +135,6 @@ sagaTitles.forEach(sagaTitle => {
 
         let numLibros = sagas[nombreSaga].length;
         
-      
-
         let numFilas = Math.ceil(numLibros / 3); // Siempre 3 columnas
 
         if (numLibros <= 4) {
@@ -230,71 +241,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* CIRCLES and MODALS MANAGMENT */
 
-const circles = document.querySelectorAll('.circle');
+/* Delegación de eventos */
+cosmereContent.addEventListener('click', async (event) => {
+  const circle = event.target; // Detecta el elemento clickeado
 
-circles.forEach(circle => {
-  circle.addEventListener('click', async () => {
-    // Obtener el nombre de la clase
-    const classList = [...circle.classList]; // Convertimos la lista en un array
-    const filteredClass = classList.find(cls => cls !== 'circle'); // Filtramos la clase "circle"
+  if (!circle.classList.contains('circle')) return; // Ignora si no es un círculo
 
-    if (!filteredClass) return; // Evitamos errores si no hay más clases
+  const classList = [...circle.classList];
+  const filteredClass = classList.find(cls => cls !== 'circle');
 
-    // Limpiar el nombre: quitar "circle", reemplazar guiones y limpiar espacios extra
-    const formattedTitle = filteredClass.replace(/circle/g, ' ').trim();
-    const finalTitle = formattedTitle.replace(/-/g, ' ').trim();
+  if (!filteredClass) return;
 
+  const formattedTitle = filteredClass.replace(/circle/g, ' ').trim();
+  const finalTitle = formattedTitle.replace(/-/g, ' ').trim();
 
-    // Buscamos en el JSON el libro con el mismo título
-    try {
-      const response = await fetch('/cosmere.json');
-      const sagas = await response.json();
+  try {
+    const response = await fetch('/cosmere.json');
+    const sagas = await response.json();
 
-      let libroEncontrado = null;
-
-      // Iterar sobre las sagas y buscar el libro con el título formateado
-      for (const saga in sagas) {
-        libroEncontrado = sagas[saga].find(libro => libro.title.toLowerCase() === finalTitle.toLowerCase());
-        if (libroEncontrado) break;
-      }
-
-      if (libroEncontrado) {
-
-        // Convertir el título a minúsculas y reemplazar los espacios con guiones
-        let nombreClase = libroEncontrado.title.toLowerCase().replace(/ /g, '-');
-
-        // Buscar si ya existe el modal con ese nombre
-        let modal = document.querySelector(`.modal-${nombreClase}`);
-
-        if (modal) {
-          // Si el modal ya existe, alternamos su visibilidad
-          const currentDisplay = window.getComputedStyle(modal).display;
-
-          if (currentDisplay === 'block') {
-            modal.style.display = 'none'; // Ocultar si está visible
-          } else {
-            modal.style.display = 'block'; // Mostrar si está oculto
-          }
-        } else {
-          // Si no existe, creamos y mostramos el modal
-          modal = document.createElement('div');
-          modal.classList.add(`modal-${nombreClase}`);
-          modal.classList.add(`modal`);
-          modal.innerHTML = `
-            <p>${libroEncontrado.description}</p>
-          `;
-
-          // Agregar el modal al contenido de cosmere
-          cosmereContent.appendChild(modal);
-
-          // Mostrar el modal
-          modal.style.display = 'block'; // Cambiar display a block para que sea visible
-        }
-      } else {
-        console.log("⚠️ No se encontró un libro con ese título en el JSON.");
-      }
-    } catch (error) {
-      console.error("❌ Error al cargar cosmere.json:", error);
+    let libroEncontrado = null;
+    for (const saga in sagas) {
+      libroEncontrado = sagas[saga].find(libro => libro.title.toLowerCase() === finalTitle.toLowerCase());
+      if (libroEncontrado) break;
     }
-  });
+
+    if (libroEncontrado) {
+      let nombreClase = libroEncontrado.title.toLowerCase().replace(/ /g, '-');
+      let modal = document.querySelector(`.modal-${nombreClase}`);
+
+      if (modal) {
+        modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+      } else {
+        modal = document.createElement('div');
+        modal.classList.add(`modal-${nombreClase}`, 'modal');
+        modal.innerHTML = `<p>${libroEncontrado.description}</p>`;
+        cosmereContent.appendChild(modal);
+        modal.style.display = 'block';
+      }
+    } else {
+      console.log("⚠️ No se encontró un libro con ese título en el JSON.");
+    }
+  } catch (error) {
+    console.error("❌ Error al cargar cosmere.json:", error);
+  }
 });

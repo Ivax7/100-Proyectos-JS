@@ -184,7 +184,7 @@ span {
   flex: 1;
   border-left: 1px solid white;
   transition: .1s ease-in-out;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
   position: relative;
@@ -216,8 +216,7 @@ span {
 }
 
 .saga {
-  margin-bottom: 15px;
-  padding: 10px;
+  padding-inline: 10px;
   background-color: transparent;
   background-position: center;
   background-size: cover;
@@ -232,6 +231,7 @@ span {
   border-bottom: 1px solid rgb(255, 255, 255);
   text-transform: uppercase;
   text-align: center;
+  font-size: 16px;
 }
 
 .saga-title:hover {
@@ -243,6 +243,9 @@ span {
   padding-left: 5px;
   color: rgb(0, 0, 0);
   color: white;
+  grid-auto-flow: column; /* 👈 Esto cambia el orden de llenado */
+  font-size: 13px;
+  letter-spacing: 2px;
 }
 
 .book-list li {
@@ -265,7 +268,7 @@ span {
 .cosmere-content {
   flex: 3;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: repeat(10, 1fr);
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -412,7 +415,7 @@ span {
   padding: 80px;
   padding-top: 0;
   color: white;
-  margin-block: 20px;
+  margin-bottom: 20px;
   width: 100%;
 }
 
@@ -491,7 +494,7 @@ span {
   content: "";
   position: absolute;
   width: 2px;
-  height: 400px;
+  height: 405px;
   background: white;
   top: 50%;
   left: 50%;
