@@ -1,3 +1,4 @@
+
 export async function loadBooks() {
   try {
     const response = await fetch('/books.json');
@@ -27,7 +28,6 @@ export async function loadBooks() {
 }
 
 export function horizontalScroll() {
-  document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".grid-container");
     if (!container) return; // Evita errores si no encuentra el contenedor
     
@@ -35,5 +35,5 @@ export function horizontalScroll() {
       event.preventDefault(); // Evita el scroll vertical predeterminado
       container.scrollLeft += event.deltaY; // Convierte el scroll vertical en horizontal
     });
-  });
-}
+};
+

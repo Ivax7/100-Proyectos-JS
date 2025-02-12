@@ -388,11 +388,10 @@ span {
   font-weight: 100;
 }
 
-
-
 .book-review img {
   height: 100%;
   width: auto;
+  max-width: 600px;
   flex: 1;
 }
 
@@ -509,10 +508,6 @@ span {
   text-align: left;
 }
 
-
-
-
-
 /* INFORMATION CIRCLES */
 
 .circle {
@@ -520,7 +515,7 @@ span {
   height: 25px;
   border-radius: 100%;
   position: absolute;
-  z-index: 99;
+  z-index: 2;
   background-color: rgba(255, 255, 255, 0.555);
   cursor: pointer;
 }
@@ -534,6 +529,10 @@ span {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.2); /* Fondo del círculo */
   animation: backgroundCircleFade 3s ease-in-out infinite;
+}
+
+.the-frugal-wizards-handbook-for-surviving-medieval-england-circle, .white-sand-volume-2-circle, .white-sand-volume-3-circle {
+  display: none;
 }
 
 .sixth-of-the-dusk-circle {
