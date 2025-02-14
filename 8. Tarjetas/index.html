@@ -11,7 +11,7 @@
 <body>
   
 
-  <!-- <div class="charge">
+  <div class="charge">
     <h1>Sticker Cards</h1>
     <svg width="400" height="4" viewBox="0 0 400 4" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="500" height="2" fill="rgb(167, 167, 167)"/>
@@ -28,41 +28,50 @@
         />
       </rect>
     </svg>
-  </div> -->
+  </div>
 
+  <div class="content">
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="">Designs</a></li>
-        <li><a href="">Create</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">X</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-
-
-  <main>
-    <div class="carousel">
-      <div class="img-container">
-        <img src="images/characters/joker.jpg" alt="Joker sticker card">
-      </div>
-      <div class="img-container">
-        <img src="images/characters/zelda.png" alt="Zelda sticker card">
-      </div>
-      <div class="img-container">
-        <img src="images/characters/luffy.png" alt="Luffy sticker card">
-      </div>
-      <div class="img-container">
-        <img src="images/characters/jin-woo.png" alt="Jin Woo sticker card">
-      </div>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/designs">Designs</a></li>
+          <li><a href="/create">Create</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/x">X</a></li>
+        </ul>
+      </nav>
+    </header>
+        
+    <div id="main-content">
+      <main>
+        <div class="carousel">
+          <div class="img-container">
+            <img src="images/characters/joker.png" alt="Joker sticker card">
+            <p>Joker</p>
+          </div>
+          <div class="img-container">
+            <img src="images/characters/zelda.png" alt="Zelda sticker card">
+            <p>Zelda</p>
+          </div>
+          <div class="img-container">
+            <img src="images/characters/luffy.png" alt="Luffy sticker card">
+            <p>Monkey D. Luffy</p>
+          </div>
+          <div class="img-container">
+            <img src="images/characters/jin-woo.png" alt="Jin Woo sticker card">
+            <p>Sung Jin-woo</p>
+          </div>
+        </div>
+      </main>
     </div>
-  </main>
-  
-
+    
+    <footer>
+      <p>自分を鼓舞する</p>
+    </footer>
+  </div>
   <script type="module" src="js/script.js"></script>
+  <script src="js/router.js"></script>
   
 </body>
 </html>

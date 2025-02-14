@@ -1,14 +1,17 @@
 
 const $chargePage = document.querySelector('.charge');
+const $mainContent = document.querySelector('.content');
 
-// setTimeout(() => {
-//   $chargePage.style.opacity='0';
-//   $chargePage.style.display='none';
-// }, 2000);
+setTimeout(() => {
+  $chargePage.style.opacity='0';
+  $chargePage.style.display='none';
+  $mainContent.style.opacity='1';
+}, 2000);
 
 document.addEventListener("DOMContentLoaded", () => {
   const images = Array.from(document.querySelectorAll(".img-container"));
-  let currentIndex = 0; // Índice de la imagen principal
+
+  let currentIndex = 0;
 
   function updateCarousel() {
       const total = images.length;
@@ -46,4 +49,23 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   updateCarousel(); // Inicializa las posiciones del carrusel
+});
+
+
+
+/* 3D effect*/
+document.querySelectorAll(".img-container").forEach((container) => {
+  const img = container.querySelector("img");
+
+  container.addEventListener("mousemove", (e) => {
+    const { width, height, left, top } = container.getBoundingClientRect();
+    const x = (e.clientX - left - width / 2) / 20; // Mueve en X
+    const y = (e.clientY - top - height / 2) / 20; // Mueve en Y
+
+    img.style.transform = `rotateX(${y}deg) rotateY(${x}deg) scale(1.05)`;
+  });
+
+  container.addEventListener("mouseleave", () => {
+    img.style.transform = "rotateX(0deg) rotateY(0deg) scale(1.05)"; // Vuelve a la posición normal
+  });
 });

@@ -27,6 +27,24 @@ body {
   min-height: 100vh;
 }
 
+/* Pantalla de carga */
+
+.charge {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  z-index: 9999;
+  color: white;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
 h1 {
   color: white;
   text-transform: uppercase;
@@ -34,18 +52,17 @@ h1 {
   position: relative;
   font-size: 48px;
 }
-/* 
-.charge {
-  text-align: center;
-  padding-inline: 20px;
-  display: none;
+
+svg {
+  padding-top: 20px;
+}
+
+
+/* Pagina principal */
+.content {
   opacity: 0;
-  transition: opacity 1s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-} */
+  transition: opacity 1.5s ease-in;
+}
 
 header {
   justify-content: start;
@@ -86,6 +103,7 @@ li:hover a {
 
 
 /* DESIGNS main content */
+
 main {
   display: flex;
   justify-content: center;
@@ -102,25 +120,6 @@ main img {
   height: 350px;
 }
 
-/* .image-container {
-  position: relative;
-  display: inline-block;} */
-
-.image-container::after {
-  content: '';
-  color: white;
-  width: 90px;
-  height: 50px;
-  left: 30px;
-  border-radius: 10px ;
-  top: 50%;
-  position: absolute;
-  transform: translateY(-50%);
-  background-image: url(../images/chip.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
 .carousel {
   display: flex;
@@ -134,21 +133,56 @@ main img {
 .img-container {
   position: absolute;
   transition: transform 0.5s ease, opacity 0.5s ease;
+  perspective: 500px; /* Profundidad 3D */
 }
 
 .img-container img {
   border-radius: 14px;
   height: 350px;
-  transition: transform 0.5s ease;
+  transition: transform 0.1s ease-out; /* Suaviza el movimiento */
 }
 
+.img-container p {
+  padding-block: 20px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  font-weight: 700;
+  display: none;
+}
 
+.active p {
+  display: block;
+
+}
 
 /* Clase activa para la animación */
-.active { transform: translateX(0) scale(1.2); z-index: 2; opacity: 1; }
+.active { transform: translateX(0) scale(1.2); z-index: 2; opacity: 1; filter:contrast(1.1);}
 
-.left { transform: translateX(-650px) scale(0.6); opacity: 0.7; }
+.left { transform: translateX(-650px) scale(0.6); opacity: 0.7; filter:contrast(0.8) brightness(.7);}
 
-.right { transform: translateX(650px) scale(0.6); opacity: 0.7; }
+.right { transform: translateX(650px) scale(0.6); opacity: 0.7; filter:contrast(0.8) brightness(.7);}
 
-.hidden { transform: scale(0); opacity: 0; }
+.hidden { transform: scale(0); opacity: 0; filter:contrast(0.8) brightness(.7); }
+
+
+
+/* Footer */
+
+footer {
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: end;  
+}
+
+footer p {
+  transform: rotate(-90deg); /* Rota el contenido -90 grados */
+  transform-origin: center center; /* Esto asegura que la rotación se haga desde el centro */
+  letter-spacing: 2px;
+}
