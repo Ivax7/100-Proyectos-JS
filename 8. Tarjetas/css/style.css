@@ -27,6 +27,12 @@ body {
   min-height: 100vh;
 }
 
+/* Estilo para el enlace activo */
+.active-link {
+  color: white;
+}
+
+
 /* Pantalla de carga */
 
 .charge {
@@ -60,7 +66,7 @@ svg {
 
 /* Pagina principal */
 .content {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 1.5s ease-in;
 }
 
@@ -167,7 +173,7 @@ main img {
 
 
 
-/* Footer */
+/* FOOTER */
 
 footer {
   color: white;
@@ -181,15 +187,82 @@ footer {
   justify-content: end;  
 }
 
-footer p {
+.footer-content p {
   transform: rotate(-90deg); /* Rota el contenido -90 grados */
   transform-origin: center center; /* Esto asegura que la rotación se haga desde el centro */
   letter-spacing: 2px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.footer-content p {
+  transform-origin: center center; /* Esto asegura que la rotación se haga desde el centro */
+  letter-spacing: 2px;
+  margin-block: 60px;
+}
+
+
+.twitter {
+  filter: invert();
+  transform: rotate(-90deg); /* Rota el contenido -90 grados */
+  width: 14px;
 }
 
 
 
-/* Estilo para el enlace activo */
-.active-link {
-  color: white;
+
+
+
+/* CREATE PAGE*/
+
+#create-main-content  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Importar imagen */
+
+.import-zone {
+  outline: none;
+  border: none;
+  background-color: blue;
+  height: 150px;
+  text-transform: uppercase;
+}
+
+
+/* Modal */
+
+.card-modal {
+  padding: 20px;
+}
+
+.modal-header {
+  background-color: rgba(255, 255, 255, 0.185);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+  padding: 12px;
+  margin-block: 50px 12px;
+}
+
+.download-button {
+  height: 20px;
+}
+
+.download-button img {
+  height: 100%;
+  filter: invert();
+}
+
+.close-button {
+  height: 16px;
+  filter: invert();
+  cursor: pointer;
 }

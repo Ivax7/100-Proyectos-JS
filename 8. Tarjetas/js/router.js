@@ -1,6 +1,6 @@
-import { initializeCarousel } from './carousel.js';
-import { colorLinks } from './colorLinks.js';
-
+import { initializeCarousel } from './parts/carousel.js';
+import { colorLinks } from './parts/colorLinks.js';
+import { cardEffect } from "./parts/cardEffect.js";
 
 // Función para manejar las rutas y cargar el contenido
 function route(path) {
@@ -23,10 +23,10 @@ function route(path) {
       
       `;
       break;
-    case '/x':
+    case '/community':
       content.innerHTML = `
 
-      <h1>Page X</h1><p>Here is page X.</p>
+      <h1>Page community</h1><p>Here is page community.</p>
       <img src="https://img.utdstc.com/icon/214/6a9/2146a9129bd9efb14667937bc7f8dc216c095c2a18214c8bb1031dd11e8dcce0:200">
       
       
@@ -59,6 +59,7 @@ function route(path) {
 
       initializeCarousel();
       colorLinks();
+      cardEffect();
 
 
       break;
