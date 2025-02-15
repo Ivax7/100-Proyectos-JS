@@ -91,7 +91,7 @@ li {
   list-style: none;
 }
 
-a {
+li a {
   color: rgb(189, 189, 189);
   transition: all .2s ease-in-out;
 }
@@ -185,4 +185,11 @@ footer p {
   transform: rotate(-90deg); /* Rota el contenido -90 grados */
   transform-origin: center center; /* Esto asegura que la rotación se haga desde el centro */
   letter-spacing: 2px;
+}
+
+
+
+/* Estilo para el enlace activo */
+.active-link {
+  color: white;
 }

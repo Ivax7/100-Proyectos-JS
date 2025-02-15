@@ -1,4 +1,5 @@
 
+/* CARGA PANTALLLA DE INICIO */
 const $chargePage = document.querySelector('.charge');
 const $mainContent = document.querySelector('.content');
 
@@ -8,50 +9,16 @@ setTimeout(() => {
   $mainContent.style.opacity='1';
 }, 2000);
 
-document.addEventListener("DOMContentLoaded", () => {
-  const images = Array.from(document.querySelectorAll(".img-container"));
 
-  let currentIndex = 0;
+/* ESTILADO E INTERACTIVIDAD CARROUSSEL*/
 
-  function updateCarousel() {
-      const total = images.length;
+// carousel.js
+import { initializeCarousel } from './carousel.js';
+initializeCarousel();
 
-      images.forEach((img, index) => {
-          img.classList.remove("active", "left", "right", "hidden");
-
-          // Calcular nueva posición de la imagen en base a `currentIndex`
-          let newIndex = (index - currentIndex + total) % total;
-
-          if (newIndex === 0) {
-              img.classList.add("active"); // Imagen en el centro
-          } else if (newIndex === 1) {
-              img.classList.add("right"); // Imagen a la derecha
-          } else if (newIndex === total - 1) {
-              img.classList.add("left"); // Imagen a la izquierda
-          } else {
-              img.classList.add("hidden"); // Imagen oculta
-          }
-      });
-  }
-
-  // Evento para detectar clics en las imágenes
-  document.querySelector(".carousel").addEventListener("click", (event) => {
-      const clickedImg = event.target.closest(".img-container");
-      if (!clickedImg) return; // Evitar errores si no se clickea una imagen
-
-      if (clickedImg.classList.contains("right")) {
-          currentIndex = (currentIndex + 1) % images.length; // Mover a la derecha
-      } else if (clickedImg.classList.contains("left")) {
-          currentIndex = (currentIndex - 1 + images.length) % images.length; // Mover a la izquierda
-      }
-
-      updateCarousel();
-  });
-
-  updateCarousel(); // Inicializa las posiciones del carrusel
-});
-
-
+/* COLOR LINKS*/
+  import { colorLinks } from './colorLinks.js';
+  colorLinks();
 
 /* 3D effect*/
 document.querySelectorAll(".img-container").forEach((container) => {
@@ -69,3 +36,5 @@ document.querySelectorAll(".img-container").forEach((container) => {
     img.style.transform = "rotateX(0deg) rotateY(0deg) scale(1.05)"; // Vuelve a la posición normal
   });
 });
+
+
