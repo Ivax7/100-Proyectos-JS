@@ -1,3 +1,13 @@
+/* CARGA PANTALLLA DE INICIO */
+// const $chargePage = document.querySelector('.charge');
+const $mainContent = document.querySelector('.content');
+
+// setTimeout(() => {
+//   $chargePage.style.opacity='0';
+//   $chargePage.style.display='none';
+  $mainContent.style.opacity='1';
+// }, 2000);
+
 const $importZone = document.querySelector('.import-zone');
 const $importInput = document.querySelector(".import-image");
 const $customizedCard = document.querySelector(".customized-card");
@@ -5,18 +15,19 @@ const $cardModal = document.querySelector(".card-modal");
 const $downloadButton = document.querySelector('.download-button'); // Botón de descarga
 const $chipImage = document.querySelector('.chip-image'); // Imagen del chip
 
+// Evento de clic en el área de importación
 $importZone.addEventListener("click", function() {
   $importInput.click(); // Simula un clic en el input file
   $customizedCard.classList.remove("show");
   $customizedCardContainer.classList.remove("show-chip");
 });
 
+// Lógica de importación de la imagen
 $importInput.addEventListener("change", function(event) {
   handleFile(event.target.files[0]);
-  updateDownloadLink(); // Actualiza el enlace de descarga
 });
 
-/* Lógica de arrastrar la imagen */
+// Lógica de arrastrar la imagen
 $importZone.addEventListener("dragover", (event) => {
   event.preventDefault();
   $importZone.style.border = "2px dashed black";
@@ -35,15 +46,14 @@ $importZone.addEventListener("drop", (event) => {
   const file = event.dataTransfer.files[0]; // Obtener el archivo
   if (file) {
     handleFile(file);
-    updateDownloadLink(); // Actualiza el enlace de descarga
   }
 });
 
 const $customizedCardContainer = document.querySelector('.customized-card-container');
 
+// Manejar archivo y asignarlo a la tarjeta
 function handleFile(file) {
   if (file && file.type.startsWith("image/")) {
-    // Si es una imagen, crea una URL local para ella
     const imageURL = URL.createObjectURL(file);
     $customizedCard.src = imageURL; // Asigna la URL de la imagen a la tarjeta
     $cardModal.style.display = "block";
@@ -59,28 +69,20 @@ function handleFile(file) {
   }
 }
 
-/* Función para manejar una imagen desde una URL de internet */
-function handleImageFromURL(url) {
-  $customizedCard.src = url; // Establece el src con la URL de la imagen desde internet
-  $cardModal.style.display = "block";
-  
-  // Añadir la clase para mostrar el chip y aplicar el efecto de escala
-  $customizedCardContainer.classList.add("show-chip");
 
-  setTimeout(() => {
-    $customizedCard.classList.add("show");
-  }, 10);
-}
 
-/* Función para actualizar el enlace de descarga */
-function updateDownloadLink() {
-  const imageSrc = $customizedCard.src; // Obtiene la URL de la imagen mostrada
-  if (imageSrc.startsWith("http") || imageSrc.startsWith("https")) {
-    // Si la imagen es de Internet, solo pasamos el enlace directo
-    $downloadButton.href = imageSrc;
-  } else {
-    // Si la imagen es local, usamos URL.createObjectURL
-    $downloadButton.href = imageSrc;
-  }
-  $downloadButton.download = 'custom-image.png'; // Nombre predeterminado para el archivo descargado
-}
+$downloadButton.addEventListener('click', function(event) {
+  event.preventDefault(); // Evita la acción predeterminada del enlace
+
+  html2canvas($customizedCardContainer).then(canvas => {
+    const imageURL = canvas.toDataURL('image/png'); // Convierte el canvas a PNG
+    
+    // Crea un enlace temporal para descargar la imagen
+    const a = document.createElement('a');
+    a.href = imageURL;
+    a.download = 'custom-image.png';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a); // Elimina el enlace después de la descarga
+  });
+});
