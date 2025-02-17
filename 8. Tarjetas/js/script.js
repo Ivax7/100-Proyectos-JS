@@ -1,50 +1,33 @@
-
-/* CARGA PANTALLLA DE INICIO */
-// const $chargePage = document.querySelector('.charge');
-const $mainContent = document.querySelector('.content');
-
-// setTimeout(() => {
-//   $chargePage.style.opacity='0';
-//   $chargePage.style.display='none';
-  $mainContent.style.opacity='1';
-// }, 2000);
-
-
-/* CREATE OWN CARD */
-
-/* Lógica de importar la imagen */
 const $importZone = document.querySelector('.import-zone');
 const $importInput = document.querySelector(".import-image");
 const $customizedCard = document.querySelector(".customized-card");
 const $cardModal = document.querySelector(".card-modal");
+const $downloadButton = document.querySelector('.download-button'); // Botón de descarga
+const $chipImage = document.querySelector('.chip-image'); // Imagen del chip
 
 $importZone.addEventListener("click", function() {
   $importInput.click(); // Simula un clic en el input file
-  $customizedCard.classList.remove("show"); 
+  $customizedCard.classList.remove("show");
+  $customizedCardContainer.classList.remove("show-chip");
 });
 
 $importInput.addEventListener("change", function(event) {
   handleFile(event.target.files[0]);
-  updateDownloadLink();
+  updateDownloadLink(); // Actualiza el enlace de descarga
 });
 
 /* Lógica de arrastrar la imagen */
-
-// Permitir arrastrar sobre import-zone sin que el navegador lo bloquee
 $importZone.addEventListener("dragover", (event) => {
   event.preventDefault();
   $importZone.style.border = "2px dashed black";
   $importZone.style.backgroundColor = "#fefefe";
 });
 
-// Restaurar estilo cuando el mouse sale del área
 $importZone.addEventListener("dragleave", () => {
   $importZone.style.border = "2px dashed gray";
   $importZone.style.backgroundColor = "#cecece";
-  updateDownloadLink();
 });
 
-// Manejar el archivo cuando se suelta sobre import-zone
 $importZone.addEventListener("drop", (event) => {
   event.preventDefault();
   $importZone.style.border = "2px dashed gray";
@@ -52,14 +35,21 @@ $importZone.addEventListener("drop", (event) => {
   const file = event.dataTransfer.files[0]; // Obtener el archivo
   if (file) {
     handleFile(file);
+    updateDownloadLink(); // Actualiza el enlace de descarga
   }
 });
 
+const $customizedCardContainer = document.querySelector('.customized-card-container');
+
 function handleFile(file) {
   if (file && file.type.startsWith("image/")) {
+    // Si es una imagen, crea una URL local para ella
     const imageURL = URL.createObjectURL(file);
-    $customizedCard.src = imageURL;
+    $customizedCard.src = imageURL; // Asigna la URL de la imagen a la tarjeta
     $cardModal.style.display = "block";
+    
+    // Añadir la clase para mostrar el chip y aplicar el efecto de escala
+    $customizedCardContainer.classList.add("show-chip");
 
     setTimeout(() => {
       $customizedCard.classList.add("show"); 
@@ -69,14 +59,28 @@ function handleFile(file) {
   }
 }
 
+/* Función para manejar una imagen desde una URL de internet */
+function handleImageFromURL(url) {
+  $customizedCard.src = url; // Establece el src con la URL de la imagen desde internet
+  $cardModal.style.display = "block";
+  
+  // Añadir la clase para mostrar el chip y aplicar el efecto de escala
+  $customizedCardContainer.classList.add("show-chip");
 
-/* Download Button */
-const $downloadButton = document.querySelector('.download-button');
-
-function updateDownloadLink() {
-  const imageSrc = $customizedCard.src;
-  $downloadButton.href = imageSrc;
-  updateDownloadLink();
+  setTimeout(() => {
+    $customizedCard.classList.add("show");
+  }, 10);
 }
 
-
+/* Función para actualizar el enlace de descarga */
+function updateDownloadLink() {
+  const imageSrc = $customizedCard.src; // Obtiene la URL de la imagen mostrada
+  if (imageSrc.startsWith("http") || imageSrc.startsWith("https")) {
+    // Si la imagen es de Internet, solo pasamos el enlace directo
+    $downloadButton.href = imageSrc;
+  } else {
+    // Si la imagen es local, usamos URL.createObjectURL
+    $downloadButton.href = imageSrc;
+  }
+  $downloadButton.download = 'custom-image.png'; // Nombre predeterminado para el archivo descargado
+}
