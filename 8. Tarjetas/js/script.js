@@ -76,7 +76,7 @@ $downloadButton.addEventListener('click', function(event) {
 
   html2canvas($customizedCardContainer).then(canvas => {
     const imageURL = canvas.toDataURL('image/png'); // Convierte el canvas a PNG
-    
+
     // Crea un enlace temporal para descargar la imagen
     const a = document.createElement('a');
     a.href = imageURL;
@@ -85,4 +85,12 @@ $downloadButton.addEventListener('click', function(event) {
     a.click();
     document.body.removeChild(a); // Elimina el enlace después de la descarga
   });
+});
+
+
+/* Animación al hacer click a la imagen */
+
+$customizedCard.addEventListener('click', () => {
+  $customizedCard.classList.toggle("show");
+  $customizedCardContainer.classList.toggle("show-chip");
 });
