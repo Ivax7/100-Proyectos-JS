@@ -1,12 +1,15 @@
 /* CARGA PANTALLLA DE INICIO */
-// const $chargePage = document.querySelector('.charge');
+const $chargePage = document.querySelector('.charge');
 const $mainContent = document.querySelector('.content');
 
-// setTimeout(() => {
-//   $chargePage.style.opacity='0';
-//   $chargePage.style.display='none';
+setTimeout(() => {
+  $chargePage.style.opacity='0';
+  $chargePage.style.display='none';
   $mainContent.style.opacity='1';
-// }, 2000);
+}, 2000);
+
+
+export function setupCreatePage() {
 
 const $importZone = document.querySelector('.import-zone');
 const $importInput = document.querySelector(".import-image");
@@ -94,3 +97,5 @@ $customizedCard.addEventListener('click', () => {
   $customizedCard.classList.toggle("show");
   $customizedCardContainer.classList.toggle("show-chip");
 });
+
+}

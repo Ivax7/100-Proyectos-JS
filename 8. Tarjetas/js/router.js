@@ -1,22 +1,42 @@
 import { initializeCarousel } from './parts/carousel.js';
 import { colorLinks } from './parts/colorLinks.js';
 import { cardEffect } from "./parts/cardEffect.js";
+import { setupCreatePage } from './script.js';
 
 // Función para manejar las rutas y cargar el contenido
 function route(path) {
-  const content = document.getElementById('main-content');
+  const mainContent = document.getElementById('main-content');
   
   switch(path) {
     case '/create':
-      content.innerHTML = `
-      
-      <h1>Create Page</h1><p>Welcome to the Designs page.</p>
-      
-      
+      mainContent.innerHTML = `
+        <div id="create-main-content">
+          <div class="import-zone"></div>
+          <input class="import-image" type="file">
+          
+          <div class="card-modal">
+            <div class="modal-header">
+              <a class="download-button" href="" download="custom-image.png">
+                <img src="./images/icons/download.png" alt="Download image">
+              </a>
+            </div>
+            <div class="customized-card-container">
+              <img class="customized-card" src="./images/characters/joker.png" alt="Sticker of Joker">
+              <img class="chip-image" src="./images/chip.png" alt="Chip">
+
+            </div>
+          </div>
+        </div>
       `;
+
+      // Asegúrate de que los elementos del DOM ya están cargados antes de ejecutar la funcionalidad
+      setTimeout(() => {
+        setupCreatePage();
+      }, 0);
+
       break;
     case '/about':
-      content.innerHTML = `
+      mainContent.innerHTML = `
       
       <h1>About Page</h1><p>Welcome to the Designs page.</p>
       
@@ -24,7 +44,7 @@ function route(path) {
       `;
       break;
     case '/community':
-      content.innerHTML = `
+      mainContent.innerHTML = `
 
       <h1>Page community</h1><p>Here is page community.</p>
       <img src="https://img.utdstc.com/icon/214/6a9/2146a9129bd9efb14667937bc7f8dc216c095c2a18214c8bb1031dd11e8dcce0:200">
@@ -33,7 +53,7 @@ function route(path) {
       `;
       break;
     default:
-      content.innerHTML = `
+      mainContent.innerHTML = `
       <main>
         <div class="carousel">
           <div class="img-container">
