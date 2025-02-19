@@ -15,7 +15,4 @@ document.querySelectorAll(".img-container").forEach((container) => {
     img.style.transform = "rotateX(0deg) rotateY(0deg) scale(1.05)"; // Vuelve a la posición normal
   });
 });
-
-
-
 }

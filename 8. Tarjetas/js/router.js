@@ -1,10 +1,15 @@
-import { initializeCarousel } from './parts/carousel.js';
-import { colorLinks } from './parts/colorLinks.js';
-import { cardEffect } from "./parts/cardEffect.js";
-import { setupCreatePage } from './script.js';
+console.log('Hola Hola');
+
+import { initializeCarousel } from './parts/designs/carousel.js';
+import { colorLinks } from './parts/designs/colorLinks.js';
+import { cardEffect } from './parts/designs/cardEffect.js';
+
+import { setupCreatePage } from './parts/create/createPage.js';
+
 
 // Función para manejar las rutas y cargar el contenido
 function route(path) {
+  console.log("🔍 Navegando a:", path);
   const mainContent = document.getElementById('main-content');
   
   switch(path) {
@@ -17,24 +22,22 @@ function route(path) {
           <div class="card-modal">
             <div class="modal-header">
               <a class="download-button" href="" download="custom-image.png">
-                <img src="./images/icons/download.png" alt="Download image">
+                <img src="${window.location.origin}/images/icons/download.png" alt="Download image">
               </a>
             </div>
             <div class="customized-card-container">
-              <img class="customized-card" src="./images/characters/joker.png" alt="Sticker of Joker">
-              <img class="chip-image" src="./images/chip.png" alt="Chip">
+              <img class="customized-card" src="${window.location.origin}/images/characters/joker.png" alt="Sticker of Joker">
+              <img class="chip-image" src="${window.location.origin}/images/chip.png" alt="Chip">
 
             </div>
           </div>
         </div>
       `;
 
-      // Asegúrate de que los elementos del DOM ya están cargados antes de ejecutar la funcionalidad
-      setTimeout(() => {
-        setupCreatePage();
-      }, 0);
+      setupCreatePage();
 
       break;
+    
     case '/about':
       mainContent.innerHTML = `
       
